@@ -1,0 +1,127 @@
+\documentclass[10pt,letterpaper]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+% Eliminado el paquete tikz ya que no lo necesitamos más
+\usepackage{tcolorbox}
+
+% Definir colores institucionales
+\definecolor{uteqGreen}{RGB}{141, 198, 63} % Color verde UTEQ #8DC63F
+\definecolor{uteqGray}{RGB}{102, 102, 102} % Color gris para textos
+
+% Configuración de márgenes
+\geometry{
+	letterpaper,
+	top=2cm,
+	bottom=2cm,
+	left=2cm,
+	right=2cm
+}
+
+% Configuración de encabezados y pies de página
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{uteqGreen}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{uteqGreen}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[C]{Universidad Tecnológica de Querétaro \thepage}
+
+% Configuración de títulos
+\titleformat{\section}
+{\color{uteqGreen}\normalfont\Large\bfseries}
+{\thesection}{1em}{}
+[{\titlerule[1pt]}]
+
+% Configuración de listas
+\setlist[enumerate]{
+	leftmargin=*,
+	label=\arabic*.,
+	itemsep=10pt,
+	parsep=0pt
+}
+
+% Se eliminaron los comandos TikZ para los logos
+% En su lugar, usaremos directamente \includegraphics
+
+% Inicio del documento
+\begin{document}
+	
+	% Encabezado con logos lado a lado usando archivos PNG
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\begin{center}
+				% Logo UTEQ a la izquierda
+				% Reemplaza "logo-uteq.png" con el nombre real de tu archivo
+				\includegraphics[width=0.5\textwidth]{Imagenes/Logo_uteq.png}
+			\end{center}
+		\end{minipage}%
+		\hfill
+		\begin{minipage}{0.45\textwidth}
+			\begin{center}
+				% Logo de 30 años a la derecha
+				% Reemplaza "logo-30anios.png" con el nombre real de tu archivo
+				\includegraphics[width=0.5\textwidth]{Imagenes/Logo_uteq_30.png}
+			\end{center}
+		\end{minipage}
+		
+		\vspace{0.5cm}
+		{\color{uteqGreen}\huge\bfseries POLÍTICAS INSTITUCIONALES}
+		
+		\vspace{0.3cm}
+		{\large\bfseries Universidad Tecnológica de Querétaro}
+		
+		\rule{\textwidth}{3pt}
+	\end{center}
+	
+	% \vspace{0.3cm}
+	
+	% Sección de políticas
+	\section*{\color{uteqGreen}POLÍTICAS DE CLASE}
+	
+	\begin{enumerate}
+		\item Es responsabilidad del Director de División Académica verificar, con la asistencia del Jefe de Unidad de Coordinación Académica/ Líder de Proyecto de Coordinación Académica, que se cumpla y mantenga este procedimiento.
+		
+		\item Para tener derecho a asistir a clases de las asignaturas programadas en el cuatrimestre y a la evaluación del aprendizaje correspondiente, será requisito que los alumnos estén inscritos oficialmente.
+		
+		\item Los alumnos contarán con correo institucional, que será el medio oficial para la comunicación y entrega de reportes, trabajos o actividades asignadas en la plataforma de Google.
+		
+		\item La planeación didáctica debe incluir las actitudes y valores que los alumnos deberán mostrar con la finalidad de lograr una convivencia armónica en el grupo escolar y alcanzar los objetivos académicos planeados. Esta información puede ser tomada del contenido temático y complementada por la academia.
+		
+		\item El plagio de tareas, proyectos, presentaciones de equipo, evaluaciones o prácticas, queda estrictamente prohibido, el alumno que sea sorprendido entregando resultados que no sean de su autoría, perderá derecho a aprobar la evaluación correspondiente.
+		
+		\item El alumno tendrá derecho a la evaluación del aprendizaje siempre y cuando, cumpla con las actividades de enseñanza aprendizaje encomendadas y entregue en tiempo y forma los productos de aprendizaje señalados en la planeación didáctica.
+		
+		\item La puntualidad y asistencia, así como las actitudes y valores son criterios para evaluar el saber ser y aprobar la unidad en la fase ordinaria. El porcentaje mínimo de asistencia será del 80\% del total de horas de la unidad. El estudiante podrá justificar alguna inasistencia solamente en caso de incapacidad por enfermedad o a solicitud de alguna autoridad educativa, familiar o empresa debido a alguna situación especial.
+		
+		\item La evaluación de puntualidad y asistencia, así como de actitudes y valores no aplica para evaluaciones remedial, extraordinario y de ultima asignatura, sin embargo, si estos requisitos no se cumplieron en evaluación ordinaria, estas últimas evaluaciones serán solamente SA.
+		
+		\item La emisión de documentos oficiales con resultados de aprendizaje alfanuméricos será responsabilidad de la Subdirección de Servicios Escolares y se apegará a lo señalado en los Lineamientos de Operación de Programas por Competencias emitido por la Dirección General de Universidades Tecnológicas y Politécnicas.
+		
+		\item La planeación didáctica se mantendrá vigente hasta que haya cambios en el plan de estudios o en la hoja de asignatura o cuando el Coordinador Académico de la asignatura y las academias así lo decidan.
+		
+		\item El resultado de la evaluación ordinaria de la unidad de aprendizaje será SA si todos los productos, asistencia y actitudes evaluados obtienen SA. Los niveles DE y AU se obtendrán como resultado de la evaluación con otros criterios al final de la unidad, que evidencien que los resultados de aprendizaje de la unidad son excedidos o superados en contextos diferentes.
+	\end{enumerate}
+	
+	\vspace{1.5cm}
+	
+	% Removido el logo de aniversario de aquí ya que ahora está en el encabezado
+	% \begin{center}
+		% \uteqaniversario
+		% \end{center}
+	
+	\vspace{1.5cm}
+	
+	% Pie de página adicional
+	\begin{center}
+		{\small Liga: GA-FM}
+	\end{center}
+	
+\end{document}

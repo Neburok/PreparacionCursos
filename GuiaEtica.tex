@@ -1,0 +1,458 @@
+\documentclass[11pt, letterpaper]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+
+% Definir colores institucionales
+\definecolor{uteqGreen}{RGB}{141, 198, 63} % Color verde UTEQ #8DC63F
+\definecolor{uteqGray}{RGB}{102, 102, 102} % Color gris para textos
+\definecolor{permitido}{RGB}{0, 150, 0} % Verde para lo permitido
+\definecolor{noPermitido}{RGB}{200, 0, 0} % Rojo para lo no permitido
+\definecolor{precaucion}{RGB}{230, 150, 0} % Amarillo para precaución
+
+% Configuración de márgenes
+\geometry{
+	letterpaper,
+	top=2.5cm,
+	bottom=2.5cm,
+	left=2.5cm,
+	right=2.5cm
+}
+
+% Configuración de encabezados y pies de página
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{uteqGreen}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{uteqGreen}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[C]{Universidad Tecnológica de Querétaro \\
+	 \thepage}
+
+% Configuración de hiperenlaces
+\hypersetup{
+	colorlinks=true,
+	linkcolor=uteqGreen,
+	filecolor=uteqGreen,
+	urlcolor=uteqGreen,
+}
+
+% Configuración de títulos
+\titleformat{\section}
+{\color{uteqGreen}\normalfont\Large\bfseries}
+{\thesection}{1em}{}
+[{\titlerule[1pt]}]
+
+\titleformat{\subsection}
+{\color{uteqGreen}\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+
+% Configuración de listas
+\setlist[itemize]{
+	leftmargin=*,
+	itemsep=5pt,
+	parsep=0pt
+}
+
+\setlist[enumerate]{
+	leftmargin=*,
+	itemsep=5pt,
+	parsep=0pt
+}
+
+% Estilos personalizados para los símbolos de permitido/no permitido
+\newcommand{\permitido}{\textcolor{permitido}{\faCheckCircle}}
+\newcommand{\nopermitido}{\textcolor{noPermitido}{\faTimesCircle}}
+\newcommand{\precaucion}{\textcolor{precaucion}{\faExclamationTriangle}}
+
+% Cajas personalizadas para secciones especiales
+\newtcolorbox{recomendadocaja}{
+	colback=green!5,
+	colframe=permitido,
+	arc=2mm,
+	boxrule=1pt,
+	leftrule=3mm,
+	title={\permitido\ \textbf{Recomendado}},
+	fonttitle=\bfseries
+}
+
+\newtcolorbox{nopermitidocaja}{
+	colback=red!5,
+	colframe=noPermitido,
+	arc=2mm,
+	boxrule=1pt,
+	leftrule=3mm,
+	title={\nopermitido\ \textbf{No permitido}},
+	fonttitle=\bfseries
+}
+
+\newtcolorbox{precaucioncaja}{
+	colback=yellow!5,
+	colframe=precaucion,
+	arc=2mm,
+	boxrule=1pt,
+	leftrule=3mm,
+	title={\precaucion\ \textbf{Requiere consideración cuidadosa}},
+	fonttitle=\bfseries
+}
+
+\newtcolorbox{casocaja}{
+	colback=gray!5,
+	colframe=uteqGray,
+	arc=2mm,
+	boxrule=1pt,
+	title={\textbf{Caso de estudio}},
+	fonttitle=\bfseries
+}
+
+\newtcolorbox{reflexioncaja}{
+	colback=blue!5,
+	colframe=blue!60,
+	arc=2mm,
+	boxrule=1pt,
+	title={\textbf{Preguntas para la reflexión}},
+	fonttitle=\bfseries
+}
+
+% Inicio del documento
+\begin{document}
+	
+	% Encabezado con logos lado a lado usando archivos PNG
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\begin{center}
+				% Logo UTEQ a la izquierda
+				% Reemplaza "logo-uteq.png" con el nombre real de tu archivo
+				\includegraphics[width=0.5\textwidth]{Imagenes/Logo_uteq.png}
+			\end{center}
+		\end{minipage}%
+		\hfill
+		\begin{minipage}{0.45\textwidth}
+			\begin{center}
+				% Logo de 30 años a la derecha
+				% Reemplaza "logo-30anios.png" con el nombre real de tu archivo
+				\includegraphics[width=0.5\textwidth]{Imagenes/Logo_uteq_30.png}
+			\end{center}
+		\end{minipage}
+		
+		{\color{uteqGreen}\huge\bfseries GUÍA ÉTICA PARA EL USO DE\\
+			\vspace{0.15cm}
+			INTELIGENCIA ARTIFICIAL}
+		
+		\vspace{0.3cm}
+		{\large\bfseries EN CONTEXTOS ACADÉMICOS DE INGENIERÍA}
+		
+		\vspace{0.5cm}
+		\rule{\textwidth}{3pt}
+	\end{center}
+	
+	% Presentación
+	\begin{tcolorbox}[colback=uteqGreen!10, colframe=uteqGreen, title=Presentación]
+		Esta guía establece los principios éticos, responsabilidades y recomendaciones para el uso adecuado de tecnologías de Inteligencia Artificial (IA) en el contexto académico de las carreras de ingeniería. Su propósito es orientar a estudiantes y docentes hacia prácticas que maximicen el potencial educativo de la IA mientras se mantiene la integridad académica, se promueve la equidad y se desarrollan competencias profesionales auténticas.
+	\end{tcolorbox}
+	
+	% Secciones principales
+	\section{Fundamentos y Principios}
+	
+	\subsection{Principios Rectores}
+	
+	El uso de IA en contextos académicos de ingeniería debe guiarse por los siguientes principios:
+	
+	\begin{itemize}
+		\item \textbf{Integridad académica}: Priorizar el aprendizaje y el desarrollo de competencias profesionales.
+		\item \textbf{Transparencia}: Comunicación clara sobre cuándo y cómo se utiliza la IA.
+		\item \textbf{Responsabilidad}: Los estudiantes mantienen la responsabilidad final sobre su trabajo académico, así como su aprendizaje.
+		\item \textbf{Equidad}: Acceso justo a las herramientas de IA y consideración de sus limitaciones.
+		\item \textbf{Privacidad}: Protección de datos personales al interactuar con sistemas de IA.
+		\item \textbf{Desarrollo de pensamiento crítico}: La IA como complemento, no como sustituto del razonamiento propio.
+		\item \textbf{Sostenibilidad}: Consideración del impacto ambiental del uso intensivo de herramientas de IA.
+	\end{itemize}
+	
+	\subsection{Marco Normativo}
+	
+	Esta guía está alineada con:
+	
+	\begin{itemize}
+		\item La Ley General de Educación Superior de México
+		\item Los principios de la Nueva Escuela Mexicana
+		\item Las recomendaciones de la UNESCO sobre Ética de la IA en Educación
+		\item Las políticas institucionales sobre integridad académica de nuestra institución
+	\end{itemize}
+	
+	\section{Usos Permitidos y Recomendados de la IA}
+	
+	\subsection{Como Herramienta de Aprendizaje}
+	
+	\begin{recomendadocaja}
+		\begin{itemize}
+			\item Utilizar IA para clarificar conceptos complejos de ingeniería
+			\item Generar explicaciones alternativas de temas estudiados en clase
+			\item Practicar resolución de problemas mediante verificación de procesos
+			\item Obtener retroalimentación sobre borradores de trabajos
+			\item Explorar aplicaciones prácticas de conceptos teóricos
+		\end{itemize}
+	\end{recomendadocaja}
+	
+	\subsection{Como Asistente de Investigación}
+	
+	\begin{recomendadocaja}
+		\begin{itemize}
+			\item Buscar y sintetizar información de fuentes confiables
+			\item Generar ideas preliminares para proyectos o investigaciones
+			\item Asistir en la revisión bibliográfica (con verificación posterior)
+			\item Ayudar en la organización y estructuración de información
+			\item Traducir literatura técnica para acceder a conocimiento internacional
+		\end{itemize}
+	\end{recomendadocaja}
+	
+	\subsection{Como Herramienta de Productividad}
+	
+	\begin{recomendadocaja}
+		\begin{itemize}
+			\item Mejorar la redacción técnica y académica
+			\item Asistir en la corrección gramatical y ortográfica
+			\item Generar plantillas o estructuras para documentos técnicos
+			\item Optimizar procesos repetitivos que no son el objetivo central del aprendizaje
+			\item Convertir datos entre formatos o sistemas de unidades
+		\end{itemize}
+	\end{recomendadocaja}
+	
+	\section{Usos No Permitidos o Cuestionables}
+	
+	\subsection{Sustitución del Aprendizaje}
+	
+	\begin{nopermitidocaja}
+		\begin{itemize}
+			\item Presentar como propio el contenido generado íntegramente por IA sin procesamiento crítico
+			\item Utilizar IA para completar evaluaciones en tiempo real sin autorización
+			\item Evadir el proceso de aprendizaje solicitando soluciones completas sin comprenderlas
+			\item Falsificar datos experimentales o resultados de laboratorio
+			\item Sustituir el análisis personal por el generado por IA en actividades evaluativas
+		\end{itemize}
+	\end{nopermitidocaja}
+	
+	\subsection{Prácticas Cuestionables}
+	
+	\begin{precaucioncaja}
+		\begin{itemize}
+			\item Uso excesivo que limite el desarrollo de competencias fundamentales
+			\item Dependencia que reduzca la capacidad de trabajo autónomo
+			\item Aplicación acrítica de recomendaciones de IA sin verificación
+			\item Uso en áreas donde se requiere juicio profesional específico
+			\item Compartir información confidencial o datos sensibles con sistemas de IA
+		\end{itemize}
+	\end{precaucioncaja}
+	
+	\section{Directrices para el Uso Responsable}
+	
+	\subsection{Transparencia y Citación}
+	
+	\begin{itemize}
+		\item \textbf{Declarar el uso}: Especificar claramente cuando se ha utilizado IA como apoyo
+		\item \textbf{Documentar el proceso}: Explicar cómo se utilizó la IA (prompts, procesamiento posterior)
+		\item \textbf{Citar adecuadamente}: Referenciar la herramienta de IA utilizada y fecha de consulta
+		\item \textbf{Diferenciar contribuciones}: Distinguir entre el contenido propio y el asistido por IA
+	\end{itemize}
+	
+	\begin{tcolorbox}[colback=gray!5, colframe=uteqGray, title={Ejemplo de citación}]
+		\textit{"Este análisis fue desarrollado con asistencia de [Nombre de la herramienta de IA], consultada el [fecha]. Los prompts utilizados y el procesamiento posterior se describen en el Anexo X."}
+	\end{tcolorbox}
+	
+	\subsection{Verificación y Validación}
+	
+	\begin{itemize}
+		\item Contrastar la información proporcionada por IA con fuentes académicas confiables
+		\item Revisar críticamente fórmulas, ecuaciones y procedimientos matemáticos
+		\item Verificar la precisión de datos técnicos y especificaciones
+		\item Evaluar la coherencia de las explicaciones con los principios ingenieriles establecidos
+		\item Identificar y corregir posibles sesgos en las respuestas generadas
+	\end{itemize}
+	
+	\subsection{Desarrollo de Competencias}
+	
+	\begin{itemize}
+		\item Utilizar la IA como andamiaje para alcanzar niveles superiores de comprensión
+		\item Complementar, no sustituir, el proceso de razonamiento personal
+		\item Analizar críticamente las respuestas generadas por IA
+		\item Practicar la reformulación de problemas para obtener mejores resultados
+		\item Desarrollar metacognición sobre el propio proceso de aprendizaje con IA
+	\end{itemize}
+	
+	\section{Contextos Específicos de Uso}
+	
+	\subsection{Tareas y Proyectos}
+	
+	\begin{itemize}
+		\item \textbf{Brainstorming}: Permitido para generar ideas iniciales, con desarrollo posterior propio
+		\item \textbf{Borradores}: Aceptable para crear primeras versiones, con revisión crítica y reelaboración
+		\item \textbf{Revisión}: Recomendado para recibir retroalimentación, con implementación personal
+		\item \textbf{Investigación}: Útil para exploración inicial, requiere verificación y profundización
+	\end{itemize}
+	
+	\subsection{Evaluaciones}
+	
+	\begin{itemize}
+		\item \textbf{Exámenes}: Generalmente no permitido, salvo autorización explícita
+		\item \textbf{Proyectos}: Uso permitido con transparencia y declaración apropiada
+		\item \textbf{Laboratorios}: Uso limitado a planificación y análisis posterior, no durante la ejecución
+		\item \textbf{Presentaciones}: Aceptable para estructuración y mejora, con dominio personal del contenido
+	\end{itemize}
+	
+	\subsection{Trabajo Colaborativo}
+	
+	\begin{itemize}
+		\item Establecer acuerdos claros sobre el uso de IA en equipos
+		\item Mantener equidad en las contribuciones personales
+		\item Utilizar IA para facilitar la integración de ideas diversas
+		\item Documentar colectivamente el uso de herramientas de IA
+	\end{itemize}
+	
+	\section{Recomendaciones Prácticas}
+	
+	\subsection{Elección de Herramientas}
+	
+	\begin{itemize}
+		\item Priorizar herramientas con transparencia sobre sus limitaciones
+		\item Considerar la especialización en temas de ingeniería
+		\item Evaluar las políticas de privacidad y uso de datos
+		\item Diversificar las herramientas para contrastar respuestas
+	\end{itemize}
+	
+	\subsection{Formulación Efectiva de Prompts}
+	
+	\begin{itemize}
+		\item Ser específico sobre el contexto y nivel académico
+		\item Solicitar explicaciones de los procesos, no solo resultados
+		\item Pedir verificación de limitaciones o posibles errores
+		\item Solicitar referencias a fuentes confiables
+		\item Incluir instrucciones sobre formato y estilo técnico requerido
+	\end{itemize}
+	
+	\subsection{Evaluación Crítica de Respuestas}
+	
+	\begin{itemize}
+		\item Verificar la consistencia física y matemática
+		\item Contrastar con conocimientos previos y material del curso
+		\item Identificar simplificaciones excesivas o generalizaciones incorrectas
+		\item Reconocer cuando las respuestas parecen plausibles pero son incorrectas
+		\item Detectar respuestas evasivas o ambiguas
+	\end{itemize}
+	
+	\section{Casos de Estudio y Ejemplos}
+	
+	\subsection{Uso Ético en Proyectos de Ingeniería}
+	
+	\begin{casocaja}
+		\textbf{Caso positivo}: Estudiante utiliza IA para generar ideas preliminares de diseño, documenta la inspiración, pero desarrolla cálculos, planos y justificaciones por sí mismo.
+	\end{casocaja}
+	
+	\begin{casocaja}
+		\textbf{Caso cuestionable}: Estudiante solicita a la IA que genere un diseño completo, incluidos cálculos y justificaciones, y lo presenta como trabajo propio sin comprensión profunda.
+	\end{casocaja}
+	
+	\subsection{Aplicación en Resolución de Problemas}
+	
+	\begin{casocaja}
+		\textbf{Uso recomendado}: Resolver independientemente un problema, usar IA para verificar proceso y detectar errores, comprender las discrepancias.
+	\end{casocaja}
+	
+	\begin{casocaja}
+		\textbf{Uso no recomendado}: Solicitar directamente la solución sin intentar resolver el problema, copiar la respuesta sin analizar el proceso de resolución.
+	\end{casocaja}
+	
+	\subsection{Apoyo en Programación y Simulación}
+	
+	\begin{casocaja}
+		\textbf{Enfoque ético}: Utilizar IA para comprender conceptos de programación, mejorar algoritmos desarrollados personalmente y depurar errores específicos.
+	\end{casocaja}
+	
+	\begin{casocaja}
+		\textbf{Enfoque cuestionable}: Solicitar código completo para una tarea sin comprender su funcionamiento o sin capacidad para modificarlo y explicarlo.
+	\end{casocaja}
+	
+	\section{Preguntas para la Reflexión Ética}
+	
+	\begin{reflexioncaja}
+		Antes de utilizar herramientas de IA, considera:
+		
+		\begin{enumerate}
+			\item ¿El uso de IA en esta tarea contribuye a mi aprendizaje o lo obstaculiza?
+			\item ¿Podré explicar y defender el trabajo resultante como reflejo de mi comprensión?
+			\item ¿Estoy siendo transparente sobre cómo he utilizado la IA?
+			\item ¿He verificado críticamente la información proporcionada por la IA?
+			\item ¿Este uso de IA es consistente con los objetivos educativos de la actividad?
+			\item ¿Estaría dispuesto a explicar a mi profesor cómo utilicé la IA en este trabajo?
+			\item ¿El uso de IA en este contexto respeta los derechos de otros (privacidad, propiedad intelectual)?
+			\item ¿Estoy desarrollando dependencia o fortaleciendo mi capacidad de criterio profesional?
+		\end{enumerate}
+	\end{reflexioncaja}
+	
+	\section{Recursos Adicionales}
+	
+	\begin{itemize}
+		\item \textbf{Políticas institucionales}: [Referencia a documentos específicos de la institución]
+		\item \textbf{Guías técnicas}: Enlaces a recursos sobre uso efectivo de IA en ingeniería
+		\item \textbf{Herramientas de verificación}: Recursos para contrastar información técnica
+		\item \textbf{Comunidades de práctica}: Foros y grupos donde discutir aplicaciones éticas de IA
+	\end{itemize}
+	
+	\section{Compromiso con la Ética en IA}
+	
+	Como miembro de la comunidad académica de ingeniería, me comprometo a:
+	
+	\begin{itemize}
+		\item Utilizar la IA como herramienta para potenciar, no sustituir, mi aprendizaje
+		\item Mantener la honestidad académica en todas mis interacciones con tecnologías de IA
+		\item Desarrollar criterio profesional para evaluar críticamente los outputs de IA
+		\item Contribuir a una cultura de uso ético y responsable de la IA en mi comunidad
+		\item Mantenerme actualizado sobre las implicaciones éticas de tecnologías emergentes
+		\item Priorizar el desarrollo de mis competencias fundamentales como futuro profesional
+	\end{itemize}
+	
+	\vspace{1cm}
+	
+	\rule{\textwidth}{1pt}
+	\begin{center}
+		\textit{Esta guía está sujeta a actualización conforme evolucionen las tecnologías de IA y su aplicación en contextos educativos. Versión 1.0, [16 Abril 2025].}
+	\end{center}
+	\rule{\textwidth}{1pt}
+	
+	\vspace{1cm}
+	
+\begin{center}
+	\textbf{Universidad Tecnológica de Querétaro}\\
+	División Industrial / Ingeniería en Nanotecnología 
+	
+
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Elaboró}} & \multicolumn{1}{c|}{\textbf{Revisó}} \\[2cm]
+	\hline
+	\multicolumn{1}{|c|}{Nombre y cargo} & \multicolumn{1}{c|}{Nombre y cargo} \\
+	\hline
+%\end{tabular}
+
+%\vspace{0.5cm}
+
+%\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+%	\hline
+	\multicolumn{1}{|c|}{\textbf{Fecha de elaboración}} & \multicolumn{1}{c|}{\textbf{Fecha de revisión}} \\[1cm]
+	\hline
+	\multicolumn{1}{|c|}{\today} & \multicolumn{1}{c|}{} \\
+	\hline
+\end{tabular}
+
+\end{center}
+
+	
+\end{document}
