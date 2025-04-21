@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="curso-header">
+  <h1>{{ page.title }}</h1>
+  
+  {% if page.description %}
+  <div class="curso-metadata">
+    <p class="description">{{ page.description }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="main-content">
+  {{ content }}
+</div>
+
+<div class="curso-footer">
+  {% if page.syllabus %}
+  <div class="curso-resources">
+    <h2>Recursos del Curso</h2>
+    <ul>
+      <li><a href="{{ page.syllabus | relative_url }}" class="btn btn-uteq">Ver Syllabus Completo</a></li>
+      {% if page.resources %}
+        {% for resource in page.resources %}
+          <li><a href="{{ resource.url | relative_url }}" class="btn">{{ resource.title }}</a></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

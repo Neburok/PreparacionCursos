@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include head.html %}
+  <body>
+    <div class="page-wrap">
+      <div class="side-bar">
+        <div class="site-header">
+          <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">
+            <img src="{{ '/Imagenes/logo_UTEQ_color.png' | relative_url }}" alt="Logo UTEQ" class="site-logo">
+          </a>
+          <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+          </button>
+        </div>
+        <nav aria-label="Main" id="site-nav" class="site-nav">
+          {% include nav.html %}
+        </nav>
+        {% if site.aux_links %}
+        <div class="aux-nav">
+          <nav aria-label="Auxiliary" class="aux-nav-list">
+            {% for link in site.aux_links %}
+            <a href="{{ link.last }}" class="aux-nav-link">
+              {{ link.first }}
+            </a>
+            {% endfor %}
+          </nav>
+        </div>
+        {% endif %}
+      </div>
+      <div class="main" id="top">
+        <div class="main-content-wrap">
+          <div class="main-content">
+            <div class="page-header">
+              <div class="breadcrumbs">
+                {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+                <a href="/">Inicio</a>
+                {% for crumb in crumbs offset: 1 %}
+                  {% if forloop.last %}
+                    / {{ page.title }}
+                  {% else %}
+                    / <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <h1 id="page-title" class="page-title">{{ page.title }}</h1>
+            </div>
+            <div id="main-content" class="main-content" role="main">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
+        <footer class="site-footer">
+          <div class="footer-content">
+            {% if site.footer_content != nil %}
+            <p class="text-small text-grey-dk-100 mb-0">{{ site.footer_content }}</p>
+            {% endif %}
+            {% if site.last_edit_timestamp and site.last_edit_time_format %}
+            <p class="text-small text-grey-dk-100 mb-0">
+              Última actualización: <span class="d-inline-block">{% if page.last_modified_date %}{{ page.last_modified_date | date: site.last_edit_time_format }}{% else %}{{ site.time | date: site.last_edit_time_format }}{% endif %}</span>
+            </p>
+            {% endif %}
+          </div>
+        </footer>
+        {% endif %}
+      </div>
+    </div>
+    {% if site.search_enabled != false %}
+      {% include search-scripts.html %}
+    {% endif %}
+    {% include footer_custom.html %}
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reducir Logo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            max-width: 100%;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reducir Logo para Jekyll</h1>
+    <p>Esta herramienta te permite reducir el tamaño del logo UTEQ para usarlo en el sitio Jekyll.</p>
+    
+    <div class="controls">
+        <input type="file" id="imageInput" accept="image/*">
+        <div>
+            <label for="width">Ancho (px): </label>
+            <input type="number" id="width" value="120" min="30" max="500">
+            
+            <label for="height">Alto (px): </label>
+            <input type="number" id="height" value="30" min="20" max="200">
+        </div>
+        <button id="resizeBtn">Redimensionar</button>
+        <button id="downloadBtn" disabled>Descargar</button>
+    </div>
+    
+    <div>
+        <h3>Vista previa:</h3>
+        <canvas id="outputCanvas"></canvas>
+    </div>
+    
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const widthInput = document.getElementById('width');
+        const heightInput = document.getElementById('height');
+        const resizeBtn = document.getElementById('resizeBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const canvas = document.getElementById('outputCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let originalImage = null;
+        
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    originalImage = img;
+                    resizeImage();
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+        
+        resizeBtn.addEventListener('click', resizeImage);
+        
+        downloadBtn.addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.download = 'logo_small.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+        
+        function resizeImage() {
+            if (!originalImage) {
+                alert('Por favor selecciona una imagen primero');
+                return;
+            }
+            
+            const width = parseInt(widthInput.value);
+            const height = parseInt(heightInput.value);
+            
+            canvas.width = width;
+            canvas.height = height;
+            
+            // Limpiar canvas
+            ctx.clearRect(0, 0, width, height);
+            
+            // Dibujar imagen redimensionada
+            ctx.drawImage(originalImage, 0, 0, width, height);
+            
+            // Habilitar botón de descarga
+            downloadBtn.disabled = false;
+        }
+    </script>
+</body>
+</html> 

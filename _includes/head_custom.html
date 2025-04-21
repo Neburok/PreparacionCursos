@@ -1,0 +1,76 @@
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="{{ '/Imagenes/logo_UTEQ_color.png' | relative_url }}">
+
+<!-- Meta tags adicionales -->
+<meta name="author" content="Universidad Tecnológica de Querétaro">
+<meta name="description" content="Materiales didácticos para cursos de ingeniería de la UTEQ">
+<meta name="keywords" content="UTEQ, ingeniería, física moderna, ingeniería de materiales, educación, universidad">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:image" content="{{ '/Imagenes/logo_UTEQ_color.png' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<style>
+  :root {
+    --uteq-green: #8DC63F;
+    --uteq-dark: #333333;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .main-content a {
+    color: var(--uteq-green);
+  }
+  
+  .main-content a:hover {
+    color: var(--uteq-dark);
+  }
+  
+  .breadcrumbs {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .breadcrumbs a {
+    color: var(--uteq-green);
+    text-decoration: none;
+  }
+  
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- Estilos personalizados adicionales -->
+<style>
+  /* Ajustes adicionales para el logo */
+  .site-logo, .site-header .site-title img {
+    max-height: 30px !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: 120px !important; /* Limitar el ancho máximo */
+    object-fit: contain !important;
+    object-position: left center !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Ajustar el contenedor del título */
+  .site-header .site-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 300px;
+    overflow: visible;
+  }
+</style>
