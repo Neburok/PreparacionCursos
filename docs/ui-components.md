@@ -6,7 +6,6 @@ has_children: true
 permalink: /docs/ui-components/
 ---
 
-# Componentes UI
 {: .no_toc }
 
 Aquí encontrarás información sobre los componentes de interfaz de usuario disponibles en este tema y cómo utilizarlos.

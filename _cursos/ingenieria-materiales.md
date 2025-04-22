@@ -5,8 +5,6 @@ parent: Cursos
 nav_order: 1
 ---
 
-# Ingeniería de Materiales
-
 ## Descripción del Curso
 
 Asignatura fundamental que proporciona las competencias necesarias para seleccionar y utilizar materiales en aplicaciones de ingeniería, considerando propiedades físicas, químicas y tecnológicas, así como criterios económicos y ambientales.

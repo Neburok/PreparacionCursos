@@ -53,16 +53,17 @@
 
 <!-- Estilos personalizados adicionales -->
 <style>
-  /* Ajustes adicionales para el logo */
+  /* Ajustes adicionales para el logo y título */
   .site-logo, .site-header .site-title img {
-    max-height: 30px !important;
+    max-height: 80px !important;
     height: auto !important;
     width: auto !important;
-    max-width: 120px !important; /* Limitar el ancho máximo */
+    max-width: 250px !important;
     object-fit: contain !important;
     object-position: left center !important;
     display: inline-block !important;
     vertical-align: middle !important;
+    margin-right: 1rem !important;
   }
   
   /* Ajustar el contenedor del título */
@@ -70,7 +71,16 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    max-width: 300px;
+    max-width: 100%;
     overflow: visible;
+    text-decoration: none;
+  }
+
+  /* Estilo para el texto del título */
+  .site-title-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--uteq-dark);
+    margin-left: 0.5rem;
   }
 </style>

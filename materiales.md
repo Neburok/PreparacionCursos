@@ -20,7 +20,7 @@ Recursos educativos organizados por tipo y tema.
 
 ## Documentos Base
 
-### Programas y Syllabi
+### Programas y Syllabus
 - Planes de asignatura detallados
 - Cronogramas y planeaciones
 - Guías metodológicas

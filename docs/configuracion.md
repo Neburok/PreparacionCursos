@@ -6,7 +6,6 @@ has_children: true
 permalink: /docs/configuracion/
 ---
 
-# Configuración
 {: .no_toc }
 
 Aquí encontrarás información sobre cómo configurar y personalizar este sitio para adaptarlo a tus necesidades.

@@ -14,10 +14,23 @@
 
 // Ajuste adicional para el logo
 .site-logo {
-  max-height: 30px !important;
+  max-height: 80px !important;  // Aumentado de 60px a 80px
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+}
+
+// Estilos adicionales para la barra lateral
+.side-bar {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
 }
 
 // Estilos para las tarjetas de cursos

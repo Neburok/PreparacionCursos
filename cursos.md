@@ -6,7 +6,7 @@ has_children: true
 permalink: /cursos/
 ---
 
-# Cursos
+
 {: .no_toc }
 
 Cursos disponibles en el repositorio de materiales didácticos.
@@ -32,7 +32,7 @@ Asignatura fundamental que proporciona las competencias necesarias para seleccio
 
 Curso que introduce los fundamentos de la mecánica cuántica y sus aplicaciones, enfatizando la comprensión de fenómenos a nivel atómico y el uso de herramientas computacionales.
 
-[Ver detalles](/cursos/fisica-moderna){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Ver detalles](/_cursos/FisicaModerna/fisica-moderna.md){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Syllabus](/FisicaModerna/syllabus){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ### Contenido Principal

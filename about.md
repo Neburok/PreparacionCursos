@@ -1,11 +1,9 @@
 ---
 layout: page
 title: Sobre el Proyecto
-nav_order: 5
+nav_order: 3
 permalink: /about/
 ---
-
-# Sobre el Proyecto
 
 ## Propósito
 
@@ -62,6 +60,24 @@ Aunque actualmente el repositorio es de uso interno, se planea abrir la colabora
 - Pares académicos
 - Profesionales del área
 - Comunidad educativa en general
+
+## Colaboradores
+
+Este proyecto es posible gracias al trabajo y dedicación de académicos comprometidos con la excelencia educativa.
+
+### Coordinación y Desarrollo Principal
+
+- **Dr. Ruben Velazquez Hernandez**
+  - Profesor Tiempo Completo Asociado 
+  - Universidad Tecnológica de Querétaro
+  - Coordinador del proyecto de materiales didácticos
+
+### Respaldo Institucional
+
+- **Comité Académico UTEQ**
+  - Universidad Tecnológica de Querétaro
+  - Supervisión y validación de contenidos académicos
+  - Alineación con políticas y estándares institucionales
 
 ## Contacto
 

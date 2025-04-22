@@ -2,7 +2,7 @@
 title: Materiales Didácticos UTEQ
 description: Repositorio de materiales didácticos para cursos de ingeniería
 baseurl: "/PreparacionCursosJ"
-url: ""
+url: "https://neburok.github.io"
 
 # Configuración del tema Just the Docs
 theme: just-the-docs
@@ -22,7 +22,7 @@ search:
 # Aux links para la navegación superior derecha
 aux_links:
   "Ver en GitHub":
-    - "//github.com/RubenVH/PreparacionCursosJ"
+    - "//github.com/neburok/PreparacionCursosJ"
 
 # Configuración del logo
 # Para usar el logo optimizado cuando lo generes:

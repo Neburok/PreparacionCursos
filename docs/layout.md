@@ -6,7 +6,6 @@ has_children: true
 permalink: /docs/layout/
 ---
 
-# Diseño
 {: .no_toc }
 
 Aquí encontrarás información sobre las opciones de diseño disponibles en este tema.

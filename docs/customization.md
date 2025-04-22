@@ -5,7 +5,6 @@ nav_order: 7
 permalink: /docs/customization/
 ---
 
-# Personalización
 {: .no_toc }
 
 Aquí encontrarás información sobre cómo personalizar el aspecto y funcionamiento del tema.

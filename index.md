@@ -6,7 +6,7 @@ description: "Repositorio de materiales didácticos para cursos de ingeniería d
 permalink: /
 ---
 
-# Materiales Didácticos UTEQ
+## Materiales Didácticos UTEQ
 {: .fs-9 }
 
 Repositorio de materiales didácticos para las asignaturas de Ingeniería de la Universidad Tecnológica de Querétaro.
@@ -35,7 +35,7 @@ Actualmente el repositorio incluye los siguientes cursos:
 
 El repositorio contiene diversos recursos didácticos:
 
-- Programas analíticos y syllabi
+- Programas analíticos y syllabus
 - Presentaciones y material teórico
 - Guías de ejercicios y problemas
 - Recursos multimedia y simulaciones

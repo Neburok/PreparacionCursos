@@ -6,7 +6,6 @@ has_children: true
 permalink: /docs/utilities/
 ---
 
-# Utilidades
 {: .no_toc }
 
 Aquí encontrarás información sobre las utilidades disponibles en este tema para mejorar la presentación de tus contenidos.
