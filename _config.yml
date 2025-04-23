@@ -5,6 +5,7 @@ baseurl: "/PreparacionCursos"
 url: "https://neburok.github.io"
 
 # Configuración del tema Just the Docs
+remote_theme: just-the-docs/just-the-docs
 theme: just-the-docs
 color_scheme: light
 
