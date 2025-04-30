@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="home-header">
+  {{ content }}
+</div>
+
+<div class="cursos-list">
+  <h2>Cursos Disponibles</h2>
+  {% for curso in site.cursos %}
+    <div class="curso-item">
+      <h3><a href="{{ curso.url | relative_url }}">{{ curso.title }}</a></h3>
+      {% if curso.description %}
+        <p>{{ curso.description }}</p>
+      {% endif %}
+      <a href="{{ curso.url | relative_url }}" class="btn btn-uteq">Ver Detalles</a>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="materiales-preview">
+  <h2>Materiales Didácticos</h2>
+  <div class="materiales-grid">
+    <div class="material-category">
+      <h3>Programas y Syllabi</h3>
+      <ul>
+        <li><a href="/materiales#programas">Planes de asignatura</a></li>
+        <li><a href="/materiales#cronogramas">Cronogramas detallados</a></li>
+      </ul>
+    </div>
+    
+    <div class="material-category">
+      <h3>Recursos Prácticos</h3>
+      <ul>
+        <li><a href="/materiales#ejercicios">Guías de ejercicios</a></li>
+        <li><a href="/materiales#laboratorio">Material de laboratorio</a></li>
+      </ul>
+    </div>
+    
+    <div class="material-category">
+      <h3>Material de Evaluación</h3>
+      <ul>
+        <li><a href="/materiales#instrumentos">Rúbricas y formatos</a></li>
+        <li><a href="/materiales#examenes">Banco de ejercicios</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>¿Necesitas más información?</h2>
+  <p>Consulta nuestra documentación o ponte en contacto con nosotros para más detalles.</p>
+  <div class="cta-buttons">
+    <a href="/docs" class="btn btn-uteq">Ver Documentación</a>
+    <a href="/about" class="btn">Sobre el Proyecto</a>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<!-- Custom scripts for all pages -->
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+<!-- Scripts para funcionalidades específicas -->
+<script>
+  // Función para manejar el scroll suave a las secciones
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top - 100
+        }, 1000);
+      }
+    });
+  });
+</script>
+
+<!-- Google Analytics (si se necesita) -->
+{% if site.ga_tracking != nil %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.ga_tracking }}', { 'anonymize_ip': {{ site.ga_anonymize_ip | default: false }}});
+  </script>
+{% endif %}
