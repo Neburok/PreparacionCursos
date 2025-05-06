@@ -6,7 +6,10 @@ nav_order: 1
 permalink: /docs/navigation/estructura/
 ---
 
+<<<<<<< HEAD
 # Estructura de Navegación
+=======
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
 {: .no_toc }
 
 Just the Docs utiliza una estructura jerárquica para organizar la navegación en el sitio.

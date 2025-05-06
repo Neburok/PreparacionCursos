@@ -6,7 +6,10 @@ nav_order: 1
 permalink: /docs/configuracion/basica/
 ---
 
+<<<<<<< HEAD
 # Configuración Básica
+=======
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
 {: .no_toc }
 
 Esta página describe la configuración básica del sitio utilizando el tema Just the Docs.

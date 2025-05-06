@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<<<<<<< HEAD
 <article class="curso">
   <header class="curso-header">
     <h1>{{ page.title }}</h1>
@@ -77,3 +78,24 @@ layout: default
     <a href="{{ '/cursos' | relative_url }}" class="btn">Volver a Cursos</a>
   </div>
 </article> 
+=======
+<div class="main-content">
+  {{ content }}
+</div>
+
+<div class="curso-footer">
+  {% if page.syllabus %}
+  <div class="curso-resources">
+    <h2>Recursos del Curso</h2>
+    <ul>
+      <li><a href="{{ page.syllabus | relative_url }}" class="btn btn-uteq">Ver Syllabus Completo</a></li>
+      {% if page.resources %}
+        {% for resource in page.resources %}
+          <li><a href="{{ resource.url | relative_url }}" class="btn">{{ resource.title }}</a></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05

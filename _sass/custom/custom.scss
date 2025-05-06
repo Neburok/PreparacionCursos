@@ -14,10 +14,30 @@
 
 // Ajuste adicional para el logo
 .site-logo {
+<<<<<<< HEAD
   max-height: 30px !important;
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
+=======
+  max-height: 80px !important;  // Aumentado de 60px a 80px
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+}
+
+// Estilos adicionales para la barra lateral
+.side-bar {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
 }
 
 // Estilos para las tarjetas de cursos
@@ -74,4 +94,67 @@
       margin: 0.5rem 0;
     }
   }
+<<<<<<< HEAD
 } 
+=======
+}
+
+////
+/// Custom SCSS for UTEQ theme
+////
+
+// Color scheme
+$uteq-green: #8DC63F;
+$uteq-dark: #333333;
+$link-color: $uteq-green;
+
+// Typography improvements
+.main-content {
+  h1, h2, h3, h4, h5, h6 {
+    color: $uteq-dark;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Custom buttons
+.btn-uteq {
+  @extend .btn;
+  background-color: $uteq-green;
+  color: white;
+  
+  &:hover {
+    background-color: darken($uteq-green, 10%);
+    color: white;
+  }
+}
+
+// Custom navigation
+.site-header {
+  border-bottom: 2px solid $uteq-green;
+}
+
+.site-title {
+  color: $uteq-dark;
+  font-weight: 600;
+  
+  &:hover {
+    color: $uteq-green;
+  }
+}
+
+// Footer customization
+.site-footer {
+  border-top: 2px solid $uteq-green;
+  color: $uteq-dark;
+}
+
+// Custom callouts
+.uteq-callout {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 0.25rem solid $uteq-green;
+  background-color: lighten($uteq-green, 45%);
+}
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05

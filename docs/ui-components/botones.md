@@ -6,7 +6,10 @@ nav_order: 1
 permalink: /docs/ui-components/botones/
 ---
 
+<<<<<<< HEAD
 # Botones
+=======
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
 {: .no_toc }
 
 Just the Docs proporciona varios estilos de botones para usarlos en tus páginas.

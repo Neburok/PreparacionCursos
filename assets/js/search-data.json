@@ -1,0 +1,25 @@
+{
+  "docs": [
+    {
+      "id": 1,
+      "title": "Física Moderna",
+      "url": "/cursos/fisica-moderna/",
+      "description": "Curso que introduce los fundamentos de la mecánica cuántica y sus aplicaciones",
+      "content": "Fundamentos de teoría cuántica, dualidad onda-partícula, ecuación de Schrödinger, átomos y estructura, estado sólido"
+    },
+    {
+      "id": 2,
+      "title": "Ingeniería de Materiales",
+      "url": "/cursos/ingenieria-materiales/",
+      "description": "Estudio de las propiedades y selección de materiales para ingeniería",
+      "content": "Propiedades físicas, químicas y tecnológicas, métodos de selección, análisis de casos industriales"
+    },
+    {
+      "id": 3,
+      "title": "Materiales Didácticos",
+      "url": "/materiales/",
+      "description": "Recursos educativos organizados por tipo y tema",
+      "content": "Programas, syllabi, presentaciones, guías, ejercicios, material de laboratorio, evaluaciones"
+    }
+  ]
+}

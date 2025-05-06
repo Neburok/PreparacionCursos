@@ -6,7 +6,10 @@ nav_order: 1
 permalink: /docs/layout/tablas/
 ---
 
+<<<<<<< HEAD
 # Tablas
+=======
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
 {: .no_toc }
 
 Just the Docs proporciona varios estilos y opciones para trabajar con tablas.

@@ -1,0 +1,15 @@
+<!-- Load search scripts if search is enabled -->
+{% if site.search_enabled != false %}
+<script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+
+<script type="text/javascript">
+  // Trigger a search on pressing '/' (forward slash) key
+  window.addEventListener('keypress', function(event) {
+    if (event.keyCode == 47) {
+      event.preventDefault();
+      document.querySelector('input#search-input').focus();
+    }
+  });
+</script>
+{% endif %}

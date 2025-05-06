@@ -1,16 +1,22 @@
 ---
 layout: curso
 title: Ingeniería de Materiales
+<<<<<<< HEAD
 codigo: IM-102
 periodo: Mayo - Agosto 2025
 imagen: /assets/images/ingenieria-materiales.png
 creditos: 3
 horas: 45
 description: "Estudio de las propiedades, comportamiento y aplicaciones de diversos materiales en ingeniería, abarcando sus procesos de selección y manufactura."
+=======
+parent: Cursos
+nav_order: 1
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
 ---
 
 ## Descripción del Curso
 
+<<<<<<< HEAD
 El curso de Ingeniería de Materiales proporciona los fundamentos necesarios para seleccionar y utilizar materiales en aplicaciones industriales. Los estudiantes desarrollarán la capacidad de analizar propiedades físicas, químicas y tecnológicas de diversos materiales, aplicando criterios de funcionalidad, costo/desempeño e impacto ambiental.
 
 Se explorarán las interrelaciones entre composición, estructura, síntesis, procesamiento y funcionamiento de los materiales, enfatizando su importancia en el contexto industrial y su impacto en la competitividad y sostenibilidad de las organizaciones.
@@ -72,3 +78,68 @@ El sistema de evaluación considera tres dimensiones fundamentales:
   - Callister, W.D. - Introducción a la Ciencia e Ingeniería de los Materiales
   - Ashby, M.F. - Materials Selection in Mechanical Design
 - **Herramientas IA** para visualización y análisis de materiales 
+=======
+Asignatura fundamental que proporciona las competencias necesarias para seleccionar y utilizar materiales en aplicaciones de ingeniería, considerando propiedades físicas, químicas y tecnológicas, así como criterios económicos y ambientales.
+
+## Competencia Principal
+
+Seleccionar materiales óptimos para procesos industriales mediante el análisis de propiedades, comportamiento y normatividad, considerando criterios de funcionalidad, relación costo/desempeño e impacto ambiental.
+
+## Contenido
+
+### Unidades Temáticas
+
+1. **Introducción a la Ingeniería de Materiales** (1 sesión)
+   - Interrelaciones entre composición, estructura y propiedades
+   - Importancia en el contexto industrial
+   - Panorama de la ciencia de materiales
+
+2. **Propiedades de los Materiales** (5 sesiones)
+   - Propiedades físicas y mecánicas
+   - Propiedades químicas y tecnológicas
+   - Caracterización y evaluación
+   - Pruebas destructivas y no destructivas
+
+3. **Selección de Materiales** (9 sesiones)
+   - Método Ashby
+   - Criterios de funcionalidad
+   - Análisis costo/desempeño
+   - Consideraciones ambientales
+   - Normatividad aplicable
+
+## Recursos
+
+### Material Didáctico
+- [Syllabus completo](/IngenieriaMateriales/syllabus)
+- Presentaciones por unidad
+- Guías de ejercicios
+- Casos de estudio
+
+### Evaluación
+- Exámenes por unidad
+- Proyecto integrador
+- Análisis de casos
+- Prácticas de laboratorio
+
+## Metodología
+
+El curso implementa una metodología activa que combina:
+
+{: .uteq-callout }
+- Exposición dialogada de conceptos teóricos
+- Análisis de casos industriales reales
+- Prácticas de caracterización de materiales
+- Resolución de problemas de selección
+- Uso del método Ashby y bases de datos
+- Aplicación de herramientas de IA como apoyo
+
+## Proyecto Integrador
+
+El curso incluye un proyecto integrador que consiste en:
+
+1. Selección fundamentada de materiales para un producto específico
+2. Análisis de propiedades y comportamiento
+3. Evaluación técnica, económica y ambiental
+4. Validación mediante normatividad aplicable
+5. Presentación y defensa de la selección
+>>>>>>> ac32365c89f8a3a1911f608dc2d04e5784f7ac05
