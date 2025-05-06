@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<article class="curso">
+  <header class="curso-header">
+    <h1>{{ page.title }}</h1>
+    
+    <div class="curso-metadata">
+      {% if page.codigo %}
+      <p><strong>Código:</strong> {{ page.codigo }}</p>
+      {% endif %}
+      
+      {% if page.periodo %}
+      <p><strong>Periodo:</strong> {{ page.periodo }}</p>
+      {% endif %}
+      
+      {% if page.creditos %}
+      <p><strong>Créditos:</strong> {{ page.creditos }}</p>
+      {% endif %}
+      
+      {% if page.horas %}
+      <p><strong>Horas:</strong> {{ page.horas }}</p>
+      {% endif %}
+    </div>
+    
+    {% if page.imagen %}
+    <div class="curso-imagen-container">
+      <img src="{{ page.imagen | relative_url }}" alt="{{ page.title }}" class="curso-imagen">
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="curso-content">
+    {{ content }}
+  </div>
+
+  {% if page.unidades %}
+  <section class="curso-unidades">
+    <h2>Unidades de aprendizaje</h2>
+    <ul class="unidades-list">
+      {% for unidad in page.unidades %}
+      <li>
+        <h3>{{ unidad.titulo }}</h3>
+        <p>{{ unidad.descripcion }}</p>
+        
+        {% if unidad.recursos %}
+        <ul class="recursos-list">
+          {% for recurso in unidad.recursos %}
+          <li><a href="{{ recurso.url | relative_url }}">{{ recurso.titulo }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.recursos %}
+  <section class="curso-recursos">
+    <h2>Recursos adicionales</h2>
+    <ul class="recursos-list">
+      {% for recurso in page.recursos %}
+      <li>
+        <a href="{{ recurso.url | relative_url }}">{{ recurso.titulo }}</a>
+        {% if recurso.descripcion %}
+        <p>{{ recurso.descripcion }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  
+  <div class="navigation-links">
+    <a href="{{ '/cursos' | relative_url }}" class="btn">Volver a Cursos</a>
+  </div>
+</article> 

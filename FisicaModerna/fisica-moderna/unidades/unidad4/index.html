@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 4: Átomos y Estructura - Física Moderna</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="site-title">Física Moderna</h1>
+                    <p class="lead text-white mb-0">Ingeniería en Nanotecnología - Mayo-Agosto 2025</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-white mb-0"><i class="bi bi-calendar-event"></i> 26 sesiones | <i class="bi bi-clock"></i> 60 horas totales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownUnidades" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Unidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUnidades">
+                            <li><a class="dropdown-item" href="../unidad0/index.html">Unidad 0: Introducción y Diagnóstico</a></li>
+                            <li><a class="dropdown-item" href="../unidad1/index.html">Unidad 1: Fundamentos de Teoría Cuántica</a></li>
+                            <li><a class="dropdown-item" href="../unidad2/index.html">Unidad 2: Dualidad onda-partícula</a></li>
+                            <li><a class="dropdown-item" href="../unidad3/index.html">Unidad 3: Ecuación de Schrödinger</a></li>
+                            <li><a class="dropdown-item active" href="../unidad4/index.html">Unidad 4: Átomos y Estructura</a></li>
+                            <li><a class="dropdown-item" href="../unidad5/index.html">Unidad 5: Introducción al Estado Sólido</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/bibliografia.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/evaluacion.html">Evaluación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Contenido de la Unidad -->
+                <div class="col-md-8 mb-4">
+                    <section class="content-box fade-in">
+                        <h2 class="page-title">Unidad 4: Átomos y Estructura</h2>
+                        
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle-fill me-2"></i> Esta unidad explora la estructura atómica desde la perspectiva cuántica, incluyendo el átomo de hidrógeno, los números cuánticos y el principio de exclusión de Pauli.
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Descripción de la Unidad</h3>
+                            <p>La Unidad 4 aplica los principios de la mecánica cuántica al estudio de la estructura atómica. Comenzaremos con la solución de la ecuación de Schrödinger para el átomo de hidrógeno, analizando los números cuánticos (n, l, ml) y su significado físico. Estudiaremos la representación visual de los orbitales atómicos y el concepto de momento angular orbital. También exploraremos el spin electrónico (ms) y el experimento de Stern-Gerlach, para finalmente abordar el principio de exclusión de Pauli y su aplicación a átomos multielectrónicos, estableciendo la conexión con la estructura de la tabla periódica.</p>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Resultados de Aprendizaje</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-check-circle-fill text-success me-2"></i>RA4.1</h5>
+                                    <p class="card-text">Describir la solución de la ecuación de Schrödinger para el átomo de hidrógeno y el significado de los números cuánticos (n, l, ml, ms).</p>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-check-circle-fill text-success me-2"></i>RA4.2</h5>
+                                    <p class="card-text">Aplicar el Principio de Exclusión de Pauli para explicar la configuración electrónica básica de átomos multielectrónicos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Sesiones</h3>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 17: Átomo de Hidrógeno</h4>
+                                        <span class="badge bg-primary">Semana 9</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Ecuación de Schrödinger para el Átomo de Hidrógeno</h6>
+                                    <p class="card-text">Estudio de la ecuación de Schrödinger para el átomo de hidrógeno, la separación de variables y el enfoque en los resultados principales.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Julio 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion17.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 18: Números Cuánticos y Orbitales</h4>
+                                        <span class="badge bg-primary">Semana 9</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Visualización de Orbitales Atómicos</h6>
+                                    <p class="card-text">Análisis de los números cuánticos (n, l, ml) y su relación con los orbitales atómicos, incluyendo visualizaciones de las distribuciones de probabilidad.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Julio 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion18.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 19: Momento Angular</h4>
+                                        <span class="badge bg-primary">Semana 10</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Momento Angular Orbital y Espacial</h6>
+                                    <p class="card-text">Estudio del momento angular orbital en el átomo de hidrógeno y su cuantización, con un enfoque conceptual.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Julio 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion19.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 20: Spin Electrónico</h4>
+                                        <span class="badge bg-primary">Semana 10</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Experimento de Stern-Gerlach</h6>
+                                    <p class="card-text">Introducción al spin electrónico (ms), el experimento de Stern-Gerlach y la discusión sobre la naturaleza intrínseca del spin.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Julio 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion20.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 21: Principio de Exclusión de Pauli</h4>
+                                        <span class="badge bg-primary">Semana 11</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Átomos Multielectrónicos y Tabla Periódica</h6>
+                                    <p class="card-text">Estudio del Principio de Exclusión de Pauli, su aplicación a átomos multielectrónicos y la conexión con la estructura de la tabla periódica.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Julio 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion21.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Conceptos Clave</h3>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Números Cuánticos</h5>
+                                            <p class="card-text">
+                                                <strong>n (principal):</strong> Determina el tamaño y la energía del orbital (1, 2, 3, ...).<br>
+                                                <strong>l (azimutal):</strong> Determina la forma del orbital (0, 1, 2, ... n-1).<br>
+                                                <strong>ml (magnético):</strong> Determina la orientación del orbital (-l, ..., 0, ..., +l).<br>
+                                                <strong>ms (spin):</strong> Determina el spin del electrón (+1/2, -1/2).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Orbitales Atómicos</h5>
+                                            <p class="card-text">
+                                                <strong>s (l=0):</strong> Forma esférica.<br>
+                                                <strong>p (l=1):</strong> Forma de doble lóbulo, tres orientaciones (px, py, pz).<br>
+                                                <strong>d (l=2):</strong> Formas más complejas, cinco orientaciones.<br>
+                                                <strong>f (l=3):</strong> Formas aún más complejas, siete orientaciones.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Principio de Exclusión de Pauli</h5>
+                                            <p class="card-text">Establece que dos electrones en un átomo no pueden tener los cuatro números cuánticos iguales. En términos prácticos, cada orbital puede contener un máximo de dos electrones con spines opuestos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Experimento de Stern-Gerlach</h5>
+                                            <p class="card-text">Experimento histórico que demostró la cuantización del momento angular intrínseco (spin) de los electrones, revelando que las partículas subatómicas poseen propiedades magnéticas intrínsecas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Simulaciones Recomendadas</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-laptop text-primary me-2"></i>Átomo de Hidrógeno</h5>
+                                    <p class="card-text">Simulación PhET "Hydrogen Atom" para visualizar los diferentes modelos atómicos y los orbitales del átomo de hidrógeno.</p>
+                                    <a href="https://phet.colorado.edu/es/simulations/hydrogen-atom" class="btn btn-sm btn-outline-primary" target="_blank">Acceder a la simulación</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-md-4">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-heading">Navegación de Unidad</h3>
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav-item">
+                                <a href="index.html" class="sidebar-nav-link active">
+                                    <i class="bi bi-house-door me-2"></i>Inicio de Unidad 4
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion17.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 17: Átomo de Hidrógeno
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion18.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 18: Números Cuánticos y Orbitales
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion19.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 19: Momento Angular
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion20.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 20: Spin Electrónico
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion21.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 21: Principio de Exclusión de Pauli
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="sidebar-heading mt-4">Recursos de la Unidad</h3>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Átomo de Hidrógeno</h5>
+                                <p class="resource-description">Solución de la ecuación de Schrödinger</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Números Cuánticos</h5>
+                                <p class="resource-description">Significado y aplicaciones</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Orbitales Atómicos</h5>
+                                <p class="resource-description">Visualización y propiedades</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Principio de Exclusión</h5>
+                                <p class="resource-description">Aplicaciones a la tabla periódica</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 d-flex justify-content-between">
+                            <a href="../unidad3/index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left"></i> Unidad Anterior
+                            </a>
+                            <a href="../unidad5/index.html" class="btn btn-primary">
+                                Siguiente Unidad <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Física Moderna</h4>
+                    <p>Curso para Ingeniería en Nanotecnología</p>
+                    <p>Periodo: Mayo - Agosto 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="../../recursos/bibliografia.html" class="footer-link">Bibliografía</a></li>
+                        <li><a href="../../recursos/simulaciones.html" class="footer-link">Simulaciones</a></li>
+                        <li><a href="../../recursos/evaluacion.html" class="footer-link">Sistema de Evaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Recursos Externos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="footer-link" target="_blank">PhET Interactive Simulations</a></li>
+                        <li><a href="https://classroom.google.com" class="footer-link" target="_blank">Google Classroom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Física Moderna - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>

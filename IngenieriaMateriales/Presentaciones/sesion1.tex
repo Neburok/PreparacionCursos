@@ -1,0 +1,444 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\usetheme{CambridgeUS}
+\usecolortheme{whale} % Tema en azul
+
+% Define colores personalizados
+\definecolor{deepblue}{HTML}{003366}
+\definecolor{lightblue}{HTML}{4682B4}
+\definecolor{darktitle}{HTML}{5DADE2}
+\definecolor{darkgreen}{HTML}{388E3C} % Color oscuro para títulos
+
+% Configurar colores del frame title
+\setbeamercolor{frametitle}{bg=darktitle,fg=white}
+\setbeamercolor{frametitle continuation}{bg=darktitle,fg=white}
+
+% Aplicar estilo al frame title
+\setbeamertemplate{frametitle}[default][shadow=false]
+
+% Aplica el azul oscuro a los puntos de las listas
+\setbeamercolor{item}{fg=deepblue}
+
+\title[Ing. Materiales]{Ingeniería de Materiales}
+\subtitle{Ingeniería Industrial}
+\author{ruben.velazquez@uteq.edu.mx}
+\institute[UTEQ]{Universidad Tecnológica de Querétaro}
+\date{Cuatrimestre Mayo - Agosto 2025}
+\logo{\includegraphics[width=2cm]{../Imagenes/LogoUTEQ.png}} % Ajusta la ruta según donde tengas el logo
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+			\usebeamerfont{author in head/foot}\insertshortauthor
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.55\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\insertshorttitle
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+			\usebeamerfont{section in head/foot}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+\makeatother
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{BIENVENIDA}
+    \begin{itemize}
+        \item \textbf{Asignatura:} Ingeniería de Materiales
+        \item \textbf{Carrera:} Ingeniería Industrial en Competencias Profesionales
+        \item \textbf{Modalidad:} Presencial asistida por tecnología
+        \item \textbf{Período:} Mayo - Agosto 2025
+        \item \textbf{Duración:} 45 horas totales (42 horas efectivas de 1 hora)
+        \item \textbf{Plataforma:} Google Classroom
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+	\frametitle{¿Por qué son importantes los materiales?}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=.8\linewidth]{Imagenes/materiales_innovacion.jpg}
+		%\caption{Variedad de materiales en aplicaciones industriales}
+%	\end{figure}	
+\textit{\begin{flushright}
+		"Los materiales marcan la frontera de lo que es posible en ingeniería."
+\end{flushright}}
+	%% TODO: Puedes añadir notas aquí si es necesario
+	\note{}	
+\end{frame}
+	
+\begin{frame}
+    \frametitle{Objetivos del Curso}
+   \begin{block}{Objetivo Original (Hoja de Asignatura)}
+   		El alumno utilizará los materiales de acuerdo al diseño del producto para que garantice la satisfacción del cliente y no contribuya al deterioro ambiental.
+   \end{block}
+   \begin{block}{Objetivo Propuesto}
+   		El alumno seleccionará y utilizará materiales para aplicaciones industriales mediante el análisis de sus propiedades físicas, químicas y tecnológicas, aplicando criterios de funcionalidad, costo/desempeño e impacto ambiental, con apoyo de herramientas computacionales y de inteligencia artificial, para garantizar la satisfacción del cliente, la rentabilidad industrial y la minimización del impacto ambiental.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Competencias a Desarrollar}
+   
+   \begin{itemize}
+      \item Administrar los recursos necesarios de la organización para asegurar la producción planeada conforme a los requerimientos del cliente.
+      
+      \item Administrar el sistema de gestión de la calidad, con un enfoque sistémico, considerando factores técnicos y económicos, contribuyendo al desarrollo sustentable.
+      
+      \item Desarrollar e innovar sistemas de manufactura a través de la dirección de proyectos, considerando estándares de calidad, ergonomía, seguridad y ecología para lograr la competitividad y rentabilidad de la organización.
+   \end{itemize}
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{Unidades Temáticas}
+    Según Hoja de Asignatura:
+    \begin{enumerate}
+    	\item Propiedades de los materiales (15 horas)
+    	\item Selección de materiales (30 horas)
+    \end{enumerate}
+    
+    \vspace{0.5cm}
+    
+    \begin{alertblock}{Distribución de horas}
+        \centering
+        Total: 45 horas (18 teóricas, 27 prácticas)\\
+        3 horas semanales
+    \end{alertblock}
+    
+\end{frame}
+
+\begin{frame}[plain]
+	\frametitle{Mapa del Curso}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=1\linewidth]{Imagenes/mapa_materiales.png}
+		%\caption{Mapa conceptual del curso}
+%	\end{figure}	
+	
+	%% Si quieres añadir notas para usar durante la presentación
+	\note{Explicar la relación entre las diferentes unidades y cómo se conectan con el proyecto integrador.}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Políticas Institucionales}
+	\begin{enumerate}
+		\item Para tener derecho a asistir a clases y evaluaciones, es requisito estar inscritos oficialmente.
+		\item Utilizaremos el correo institucional como medio oficial de comunicación.
+		\item El plagio está estrictamente prohibido. Cualquier trabajo que no sea de su autoría resultará en la pérdida del derecho a aprobar la evaluación correspondiente.
+		\item Se requiere un mínimo de 80\% de asistencia para tener derecho a evaluación.
+		\item Las entregas deben ser puntuales y cumplir con los criterios establecidos.
+		\item Las inasistencias solo pueden justificarse por causas específicas como enfermedad con incapacidad o solicitud de autoridad.
+	\end{enumerate}
+
+\end{frame}	
+
+\begin{frame}
+	\frametitle{Políticas Específicas del Curso}
+	
+	\textbf{Aspectos Académicos:}
+	
+	\begin{itemize}
+		\item Entrega puntual de actividades con penalización por retraso
+		\item Originalidad en todos los trabajos
+		\item Uso ético y declarado de herramientas de IA
+	\end{itemize}
+
+	\textbf{Uso de Tecnología:}
+	
+	\begin{itemize}
+		\item Aprovechamiento de bases de datos de materiales como apoyo
+		\item Utilización de simulaciones para visualizar propiedades de materiales
+		\item Enfoque en comprensión conceptual, no solo en resultados
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+    \frametitle{Metodología de Enseñanza-Aprendizaje}
+    
+    \textbf{Sesiones Presenciales}
+    \begin{itemize}
+        \item Exposición dialogada
+        \item Análisis de casos industriales
+        \item Prácticas de selección de materiales
+        \item Discusión y trabajo colaborativo
+    \end{itemize}
+    \vspace{0.3cm}
+    
+    \textbf{Actividades Asincrónicas (Google Classroom)}
+    \begin{itemize}
+        \item Elaboración de fichas técnicas de materiales
+        \item Resolución de problemas de selección
+        \item Uso guiado de bases de datos y herramientas de IA
+        \item Foros de discusión y análisis de casos
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Uso de Tecnología}
+    
+    \textbf{Bases de Datos de Materiales}
+    \begin{itemize}
+        \item MatWeb, CES EduPack o alternativas open source
+        \item Recursos de repositorios académicos
+    \end{itemize}
+    \vspace{0.3cm}
+    
+    \textbf{Herramientas de IA como Apoyo}
+    \begin{itemize}
+        \item Asistentes conversacionales para:
+        \begin{itemize}
+            \item Profundizar en propiedades específicas
+            \item Obtener explicaciones alternativas
+            \item Verificar pasos en la selección de materiales
+            \item Buscar información complementaria o aplicaciones industriales
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \frametitle{Uso Ético de IA en el Curso}
+    
+    \begin{block}{Integración de IA en el proceso enseñanza-aprendizaje}
+        Este curso incorpora el uso responsable de herramientas de Inteligencia Artificial como apoyo al aprendizaje, siguiendo lineamientos éticos institucionales.
+    \end{block}
+    
+    \begin{columns}[t]
+        \column{0.48\textwidth}
+        \textbf{Principios rectores:}
+        \begin{itemize}
+            \item Integridad académica
+            \item Transparencia
+            \item Responsabilidad
+            \item Desarrollo de pensamiento crítico
+        \end{itemize}
+        
+        \column{0.48\textwidth}
+        \textbf{Objetivo de integración:}
+        \begin{itemize}
+            \item Potenciar, no sustituir, el aprendizaje
+            \item Desarrollar competencias digitales
+            \item Preparar para entorno profesional actual
+            \item Fomentar criterio profesional
+        \end{itemize}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Usos Permitidos y No Permitidos de IA}
+    
+    \begin{columns}[t]
+        \column{0.48\textwidth}
+        \textbf{Usos recomendados:} {\color{darkgreen}\checkmark}
+        \begin{itemize}
+            \item Clarificar conceptos complejos
+            \item Generar explicaciones alternativas
+            \item Verificar procesos de resolución
+            \item Buscar y sintetizar información
+            \item Mejorar redacción técnica
+            \item Generar ideas preliminares
+        \end{itemize}
+        
+        \column{0.48\textwidth}
+        \textbf{Usos no permitidos:} {\color{red}\textsf{×}}
+        \begin{itemize}
+            \item Presentar contenido de IA como propio
+            \item Completar evaluaciones sin autorización
+            \item Evadir el proceso de aprendizaje
+            \item Falsificar datos experimentales
+            \item Sustituir análisis personal en evaluaciones
+        \end{itemize}
+    \end{columns}
+    
+    \vspace{0.5cm}
+    \begin{alertblock}{Transparencia}
+        Se requiere declarar explícitamente cuándo y cómo se ha utilizado IA en los trabajos.
+    \end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Evaluación}
+    
+    \textbf{Requisito de asistencia:}
+    \begin{itemize}
+        \item Mínimo 80\% para tener derecho a evaluación
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \textbf{Evaluación Diagnóstica (0\%)}
+    \begin{itemize}
+        \item Cuestionario inicial (hoy)
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \textbf{Evaluación Formativa (40\%)}
+    \begin{itemize}
+        \item Portafolio de fichas técnicas de materiales (10\%)
+        \item Reportes de prácticas y análisis de casos (10\%)
+        \item Ejercicios de aplicación y problemas (10\%)
+        \item Participación en discusiones y foros (5\%)
+        \item Autoevaluación/coevaluación (5\%)
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \textbf{Evaluación Sumativa (60\%)}
+    \begin{itemize}
+        \item Evaluación teórico-práctica Unidad I (15\%)
+        \item Evaluación teórico-práctica Unidad II (15\%)
+        \item Proyecto integrador de selección de materiales (30\%)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Niveles de Desempeño}
+    
+    \textbf{SA (Satisfactorio)}
+    \begin{itemize}
+        \item Comprensión básica de propiedades de materiales y criterios de selección
+        \item 80\% de actividades formativas con calidad aceptable
+        \item Mínimo 70\% en evaluaciones sumativas
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \textbf{DE (Destacado)}
+    \begin{itemize}
+        \item Comprensión profunda de conceptos e interrelaciones
+        \item 100\% de actividades con alta calidad
+        \item Mínimo 85\% en evaluaciones sumativas
+        \item Propuestas alternativas con justificación técnica
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \textbf{AU (Autónomo)}
+    \begin{itemize}
+        \item Pensamiento crítico avanzado en selección de materiales
+        \item Soluciones originales a problemas complejos
+        \item Mínimo 95\% en evaluaciones sumativas
+        \item Integración de aspectos técnicos, económicos y ambientales con visión sistémica
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Recursos Principales}
+    
+    \textbf{Bibliografía Base}
+    \begin{itemize}
+        \item Askeland, D. (2005). \textit{Ciencias e Ingeniería de Materiales}. International Thomson Editores.
+        \item Callister, W.D. (1997). \textit{Introducción a la Ciencia e Ingeniería de los Materiales}. Editorial Reverté.
+        \item Smith, W. F. (2007). \textit{Fundamentos de la Ciencia e Ingeniería de Materiales}. McGraw-Hill Interamericana.
+        \item Shackelford, J.F. (2005). \textit{Introducción a la Ciencia de Materiales para Ingenieros}. Pearson Alhambra.
+    \end{itemize}
+    \vspace{0.3cm}
+    
+    \textbf{Recursos Digitales}
+    \begin{itemize}
+        \item Repositorios CONACYT, IPN, UNAM
+        \item Base de datos MatWeb (acceso institucional)
+        \item Classroom: código de acceso [insertar código]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Políticas de Clase Institucionales}
+    \begin{enumerate}
+        \item Para tener derecho a asistir a clases y a la evaluación del aprendizaje correspondiente, será requisito que los alumnos estén inscritos oficialmente.
+        
+        \item Los alumnos contarán con correo institucional, que será el medio oficial para la comunicación y entrega de reportes, trabajos o actividades asignadas en la plataforma de Google.
+        
+        \item El plagio de tareas, proyectos, presentaciones, evaluaciones o prácticas, queda estrictamente prohibido. El alumno que sea sorprendido entregando resultados que no sean de su autoría, perderá derecho a aprobar la evaluación correspondiente.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Políticas de Clase Institucionales}
+    \begin{enumerate}\setcounter{enumi}{3}
+        \item El alumno tendrá derecho a la evaluación del aprendizaje siempre y cuando cumpla con las actividades encomendadas y entregue en tiempo y forma los productos de aprendizaje señalados.
+        
+        \item La puntualidad y asistencia, así como las actitudes y valores son criterios para evaluar el saber ser y aprobar la unidad en la fase ordinaria. El porcentaje mínimo de asistencia será del 80\% del total de horas de la unidad.
+        
+        \item El estudiante podrá justificar alguna inasistencia solamente en caso de incapacidad por enfermedad o a solicitud de alguna autoridad educativa, familiar o empresa debido a alguna situación especial.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Importancia de la Ingeniería de Materiales}
+    
+    \begin{itemize}
+        \item 60-70\% del costo final de muchos productos está en sus materiales
+        \item La selección adecuada impacta directamente en:
+        \begin{itemize}
+            \item Calidad y desempeño del producto
+            \item Rentabilidad del proceso productivo
+            \item Sostenibilidad ambiental
+            \item Competitividad de la organización
+        \end{itemize}
+        \item Influye en la selección de procesos, equipos y tecnologías necesarias
+        \item Determina el impacto ambiental del ciclo de vida del producto
+    \end{itemize}
+    
+    \begin{block}{Ejemplo de impacto económico}
+        Se estima que los problemas relacionados con la selección incorrecta de materiales causan pérdidas de entre el 3\% y 5\% del PIB en países industrializados.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Próximas Sesiones y Proyecto Integrador}
+    
+    \textbf{Sesiones Iniciales}
+    \begin{itemize}
+        \item Hoy: Presentación y diagnóstico
+        \item Sesión 2: Introducción a la ingeniería de materiales
+        \item Sesión 3: Interrelaciones entre estructura, propiedades y procesamiento
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \textbf{Proyecto Integrador}
+    \begin{itemize}
+        \item Selección y justificación de materiales para un producto industrial específico
+        \item Consideración de aspectos técnicos, económicos y ambientales
+        \item Aplicación de metodologías sistemáticas de selección
+        \item Implementación gradual durante el cuatrimestre
+        \item Presentación final en las últimas sesiones
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Evaluación Diagnóstica}
+    
+    A continuación realizaremos:
+    \begin{enumerate}
+        \item Presentación breve de cada estudiante
+        \item Expectativas sobre el curso
+        \item Cuestionario diagnóstico (Google Forms)
+        \item Discusión sobre uso ético de bases de datos y herramientas de IA como apoyo al aprendizaje
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{¡Comencemos!}
+    
+    \textbf{Contacto:}
+    \begin{itemize}
+        \item Correo electrónico: [insertar correo]
+        \item Horario de consulta: [insertar horario]
+        \item Classroom: [insertar enlace]
+    \end{itemize}
+    \vspace{0.8cm}
+    
+    \begin{center}
+        \Large ¿Preguntas?
+    \end{center}
+\end{frame}
+
+\end{document}

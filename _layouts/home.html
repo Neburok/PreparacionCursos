@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="home">
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+
+  {% if site.cursos.size > 0 %}
+  <div class="cursos-grid">
+    <h2>Cursos destacados</h2>
+    <div class="grid-container">
+      {% for curso in site.cursos %}
+      <div class="curso-card">
+        <a href="{{ curso.url | relative_url }}">
+          {% if curso.imagen %}
+          <img src="{{ curso.imagen | relative_url }}" alt="{{ curso.title }}" class="curso-imagen">
+          {% else %}
+          <div class="curso-imagen-placeholder">{{ curso.title | slice: 0, 1 }}</div>
+          {% endif %}
+          <h3>{{ curso.title }}</h3>
+          <p>{{ curso.description | truncate: 100 }}</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div> 

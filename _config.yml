@@ -1,0 +1,86 @@
+# Configuración básica para el sitio de cursos
+title: "Cursos de Ingeniería"
+author: "Prof. Rubén Velázquez Hernández"
+description: "Recursos didácticos para cursos universitarios de Ingeniería"
+baseurl: ""
+url: ""
+
+# Configuración de temas
+theme: just-the-docs
+
+# Configuración específica de Just The Docs
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+aux_links:
+  "Universidad Tecnológica de Querétaro":
+    - "https://www.uteq.edu.mx/"
+
+# Configuración del logo
+# Para usar el logo optimizado cuando lo generes:
+# logo: "/assets/images/logos/logo_small.png"
+logo: "/assets/images/logo_UTEQ_color.png"
+logo_alt: "Logo UTEQ"
+# Control adicional para el logo
+nav_external_links_custom_icons: true
+
+# Configuración de navegación de Just the Docs
+aux_links_new_tab: true
+nav_sort: case_sensitive
+back_to_top: true
+back_to_top_text: "Volver arriba"
+footer_content: "Copyright &copy; 2024 Universidad Tecnológica de Querétaro."
+last_edit_timestamp: true
+last_edit_time_format: "%b %e %Y at %I:%M %p"
+
+# Configuración de colecciones para organizar cursos
+collections:
+  cursos:
+    output: true
+    permalink: /:collection/:name/
+  materiales:
+    output: true
+    permalink: /:collection/:name/
+
+# Configuración por defecto
+defaults:
+  - scope:
+      path: ""
+      type: "cursos"
+    values:
+      layout: "curso"
+  - scope:
+      path: ""
+      type: "materiales"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins de Jekyll
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
+# Excluir archivos y carpetas
+exclude:
+  - .git/
+  - .gitignore
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - resize_logo.html
+
+# Variables personalizadas
+institucion: "Universidad Tecnológica de Querétaro" 

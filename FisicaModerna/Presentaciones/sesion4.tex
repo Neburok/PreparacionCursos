@@ -1,0 +1,315 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usetheme{AnnArbor}
+\usecolortheme{spruce}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+% define a darker brown
+\definecolor{uwbrown}{HTML}{662200}
+% apply dark brown to the item bullet points
+\setbeamercolor{item}{fg=uwbrown}
+
+\title[Efecto Fotoeléctrico]{El Efecto Fotoeléctrico}
+\subtitle{Fundamentos de la Física Cuántica}
+\author{ruben.velazquez@uteq.edu.mx}
+\institute[UTEQ]{Universidad Tecnológica de Querétaro}
+\date{Cuatrimestre Mayo - Agosto 2025}
+\logo{\includegraphics[width=2cm]{../Imagenes/Logo_uteq.png}}
+
+\begin{document}
+	
+	\frame{\titlepage}
+	
+	\begin{frame}
+		\frametitle{Objetivos de Aprendizaje}
+		\begin{itemize}
+			\item Explicar el fenómeno del efecto fotoeléctrico y su importancia para la física cuántica
+			\item Comparar las predicciones clásicas con los resultados experimentales
+			\item Aplicar la ecuación de Einstein para resolver problemas de efecto fotoeléctrico
+			\item Relacionar el efecto fotoeléctrico con aplicaciones tecnológicas modernas
+			\item Comprender cómo el efecto fotoeléctrico evidencia la naturaleza corpuscular de la luz
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Contexto Histórico}
+		\begin{itemize}
+			\item Descubierto por Heinrich Hertz (1887) mientras estudiaba ondas electromagnéticas
+			\item Investigado sistemáticamente por Philipp Lenard (Premio Nobel 1905)
+			\item Explicado teóricamente por Albert Einstein (1905) 
+			\item Premio Nobel de Física a Einstein (1921) por "sus servicios a la Física Teórica y especialmente por su descubrimiento de la ley del efecto fotoeléctrico"
+			\item Proporcionó evidencia crucial para la teoría cuántica naciente
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{El Fenómeno del Efecto Fotoeléctrico}
+		\begin{center}
+			\includegraphics[height=5cm]{../Imagenes/EFE_diagrama}
+		\end{center}
+		\begin{itemize}
+			\item Luz incidente sobre una superficie metálica provoca emisión de electrones
+			\item Los electrones emitidos se denominan \alert{fotoelectrones}
+			\item La energía cinética de los fotoelectrones puede medirse experimentalmente
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Montaje Experimental}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\includegraphics[width=\textwidth]{../Imagenes/EFE_diagrama}
+			\column{0.5\textwidth}
+			\begin{itemize}
+				\item Tubo al vacío con dos placas metálicas
+				\item Emisor (E): placa metálica expuesta a la luz
+				\item Colector (C): recoge los electrones emitidos
+				\item Batería: crea diferencia de potencial entre placas
+				\item Amperímetro: mide la corriente de fotoelectrones
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Observaciones Experimentales (I)}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\includegraphics[width=\textwidth]{../Imagenes/EFE_curvas.png}
+			\column{0.5\textwidth}
+			\begin{itemize}
+				\item Si $V > 0$: corriente aumenta hasta saturación
+				\item Si $V < 0$: corriente disminuye
+				\item Existe un \alert{potencial de frenado} ($V_s$) para el cual la corriente se anula
+				\item La energía cinética máxima está relacionada con el potencial de frenado: $K_{max} = eV_s$
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Observaciones Experimentales (II)}
+		
+		\begin{enumerate}
+			\item La energía cinética máxima de los fotoelectrones \alert{no depende de la intensidad} de la luz, sino de su \alert{frecuencia}
+			\item Los electrones son emitidos instantáneamente (sin retraso), incluso a muy baja intensidad
+			\item No hay emisión de electrones por debajo de cierta \alert{frecuencia de corte} específica para cada metal
+			\item La emisión de fotoelectrones aumenta con la intensidad de la luz, pero no su energía máxima
+		\end{enumerate}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Explicación de Einstein (1905)}
+		\begin{itemize}
+			\item La luz está compuesta por "cuantos" de energía (fotones)
+			\item Cada fotón tiene una energía $E = hf$, donde $h$ es la constante de Planck
+			\item Un fotón transfiere toda su energía a un solo electrón
+			\item Parte de esta energía se usa para liberar al electrón del metal (función trabajo $\phi$)
+			\item El resto se convierte en energía cinética del electrón
+		\end{itemize}
+		
+		\begin{alertblock}{Ecuación de Einstein para el Efecto Fotoeléctrico}
+			\begin{equation}
+				K_{max} = hf - \phi
+			\end{equation}
+		\end{alertblock}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Interpretación de la Ecuación de Einstein}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\includegraphics[width=\textwidth]{../Imagenes/grafica_pendiente}
+			
+			\column{0.5\textwidth}
+			\begin{itemize}
+				\item $K_{max} = hf - \phi$
+				\item $h$ = pendiente de la recta
+				\item $\phi$ = función trabajo (intercepto)
+				\item Frecuencia de corte: $f_c = \frac{\phi}{h}$
+				\item Longitud de onda de corte: $\lambda_c = \frac{hc}{\phi}$
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Función Trabajo para Diversos Metales}
+		\begin{center}
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\textbf{Metal} & \textbf{Función Trabajo $\phi$ (eV)} & \textbf{$\lambda_c$ (nm)}\\
+				\hline
+				Na & 2.46 & 504 \\
+				Al & 4.08 & 304 \\
+				Cu & 4.70 & 264 \\
+				Zn & 4.31 & 288 \\
+				Ag & 4.73 & 262 \\
+				Pt & 6.35 & 195 \\
+				Fe & 4.50 & 276 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		\begin{block}{Nota}
+			$hc \approx 1240 \text{ eV} \cdot \text{nm}$ es una combinación útil para cálculos
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Explicación de las Observaciones Experimentales}
+		\begin{enumerate}
+			\item $K_{max} = hf - \phi$ depende de la frecuencia $f$, no de la intensidad
+			\item La emisión es instantánea porque cada fotón interactúa individualmente
+			\item No hay efecto por debajo de $f_c$ porque $hf < \phi$
+			\item Mayor intensidad = más fotones = más electrones, pero con la misma energía máxima
+		\end{enumerate}
+		
+		\begin{alertblock}{¡La naturaleza corpuscular de la luz!}
+			El efecto fotoeléctrico demuestra que la luz se comporta como partículas (fotones) al interactuar con la materia, no solo como ondas.
+		\end{alertblock}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Ejemplo: Cálculo con Efecto Fotoeléctrico}
+		\small
+		\begin{block}{Problema}
+			Una superficie de sodio (Na) con función trabajo $\phi = 2.46$ eV se ilumina con luz de longitud de onda de 300 nm. Determine:
+			\begin{enumerate}
+				\item La energía de los fotones incidentes
+				\item La energía cinética máxima de los fotoelectrones
+				\item El potencial de frenado
+			\end{enumerate}
+		\end{block}
+		
+		\begin{exampleblock}{Solución}
+			\begin{align}
+				E &= hf = \frac{hc}{\lambda} = \frac{1240 \text{ eV}\cdot\text{nm}}{300 \text{ nm}} = 4.13 \text{ eV}\\
+				K_{max} &= hf - \phi = 4.13 \text{ eV} - 2.46 \text{ eV} = 1.67 \text{ eV}\\
+				V_s &= \frac{K_{max}}{e} = 1.67 \text{ V}
+			\end{align}
+		\end{exampleblock}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Actividad con Simulador PhET}
+		\begin{center}
+			\includegraphics[height=6cm]{../Imagenes/grafica_pendiente}
+		\end{center}
+		\begin{block}{Instrucciones}
+			Acceder a: {https://phet.colorado.edu/es/simulation/photoelectric}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Aplicaciones Tecnológicas}
+		\begin{columns}
+			\column{0.6\textwidth}
+			\begin{itemize}
+				\item Celdas solares fotovoltaicas
+				\item Sensores y detectores de luz
+				\item Tubos fotomultiplicadores
+				\item Dispositivos de acoplamiento de carga (CCD)
+				\item Microscopía de fotoemisión
+				\item Visión nocturna
+				\item Lectores ópticos y controles automáticos
+			\end{itemize}
+			
+			\column{0.4\textwidth}
+			\includegraphics[width=\textwidth]{../Imagenes/grafica_pendiente}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Impacto Histórico y Conceptual}
+		\begin{itemize}
+			\item Primera evidencia experimental directa de la cuantización de la energía
+			\item Confirmó la hipótesis cuántica de Planck sobre la radiación electromagnética
+			\item Introdujo el concepto del fotón (partícula de luz)
+			\item Contribuyó al desarrollo del principio de dualidad onda-partícula
+			\item Pieza fundamental en la revolución cuántica del siglo XX
+			\item Transformó nuestra comprensión de la interacción luz-materia
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Recapitulación: Conceptos Clave}
+		\begin{itemize}
+			\item El efecto fotoeléctrico es la emisión de electrones cuando la luz incide sobre un metal
+			\item No puede explicarse mediante la física clásica (modelo ondulatorio)
+			\item Requiere el modelo corpuscular de la luz (fotones con energía $E = hf$)
+			\item La ecuación de Einstein: $K_{max} = hf - \phi$ describe correctamente el fenómeno
+			\item Estableció las bases para el desarrollo de la mecánica cuántica
+			\item Tiene numerosas aplicaciones tecnológicas en la actualidad
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Conexión con el Siguiente Tema}
+		\begin{alertblock}{Dualidad Onda-Partícula}
+			\centering
+			Si la luz puede comportarse como partícula...\\
+			¿Podría la materia comportarse como onda?
+		\end{alertblock}
+		
+		\begin{center}
+			\Large
+			Hipótesis de De Broglie (1924):\\
+			$\lambda = \frac{h}{p} = \frac{h}{mv}$
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Actividades y Evaluación}
+		\begin{block}{Actividades para la próxima sesión}
+			\begin{itemize}
+				\item Resolver el problema integrador sobre aplicaciones del efecto fotoeléctrico
+				\item Leer el material sobre la Hipótesis de De Broglie y responder guía de lectura
+				\item Opcional (puntos extra): Video demostrativo sobre efecto fotoeléctrico
+			\end{itemize}
+		\end{block}
+		
+		\begin{alertblock}{Evaluación formativa}
+			\begin{itemize}
+				\item Quiz digital: acceso a través del código QR o enlace en Google Classroom
+				\item Reporte de la actividad con el simulador PhET
+				\item Participación en las discusiones de clase
+			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Referencias y Recursos Complementarios}
+		\begin{thebibliography}{99}
+			\bibitem{Griffiths} Griffiths, D. (2016). \textit{Quantum Mechanics}. Cambridge University Press.
+			\bibitem{Eisberg} Eisberg, R. \& Resnick, R. \textit{Física Cuántica}. Limusa Wiley.
+			\bibitem{Serway} Serway, R. A., Moses, C. J., \& Moyer, C. A. (2005). \textit{Física Moderna}.
+			\bibitem{Tipler} Tipler, P. A. (2012). \textit{Física Moderna}. Reverté.
+		\end{thebibliography}
+		
+		\begin{block}{Videos recomendados}
+			\begin{itemize}
+				\item "El efecto fotoeléctrico" - Walter Lewin, MIT OpenCourseWare
+				\item "Explicación del efecto fotoeléctrico" - Khan Academy (español)
+				\item "Aplicaciones modernas del efecto fotoeléctrico" - SciShow
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{¿Preguntas?}
+		\begin{center}
+			\huge ¡Gracias por su atención!\\
+			\vspace{1cm}
+			\normalsize
+			Para dudas adicionales: [correo electrónico del profesor]
+		\end{center}
+	\end{frame}
+	
+\end{document}

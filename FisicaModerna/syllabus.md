@@ -277,9 +277,12 @@ El nivel máximo alcanzable en evaluación remedial será SA, conforme a las pol
 
 ### Bibliografía Base
 
+- Hugh D. Young & Roger A. Freedman (2009). Física Universitaria con Física Moderna. Volumen 2
+- Raymond A. Serway &  John W. Jewett, Jr (2009). Física para ciencias e ingeniería
+con Física Moderna,
 - Griffiths, D. (2016). Quantum Mechanics.
-- Eisberg, R., & Resnick, R. Física cuántica.
-- Serway, R. A., Moses, C. J., & Moyer, C. A. (2005). Física moderna.
+- Eisberg, R., & Resnick, R. (2002) Física cuántica. 
+- Douglas C. Giancoli (2009). Física para Ciencia e Ingeniería con física moderna
 - Tipler, P. A. (2012). Física Moderna.
 - (Otros según preferencia y disponibilidad)
 

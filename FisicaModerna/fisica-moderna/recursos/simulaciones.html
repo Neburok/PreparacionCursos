@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Moderna - Recursos Interactivos</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="site-title">Física Moderna</h1>
+                    <p class="lead text-white mb-0">Ingeniería en Nanotecnología - Mayo-Agosto 2025</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-white mb-0"><i class="bi bi-calendar-event"></i> 26 sesiones | <i class="bi bi-clock"></i> 60 horas totales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUnidades" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Unidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUnidades">
+                            <li><a class="dropdown-item" href="../unidades/unidad0/index.html">Unidad 0: Introducción y Diagnóstico</a></li>
+                            <li><a class="dropdown-item" href="../unidades/unidad1/index.html">Unidad 1: Fundamentos de Teoría Cuántica</a></li>
+                            <li><a class="dropdown-item" href="../unidades/unidad2/index.html">Unidad 2: Dualidad onda-partícula</a></li>
+                            <li><a class="dropdown-item" href="../unidades/unidad3/index.html">Unidad 3: Ecuación de Schrödinger</a></li>
+                            <li><a class="dropdown-item" href="../unidades/unidad4/index.html">Unidad 4: Átomos y Estructura</a></li>
+                            <li><a class="dropdown-item" href="../unidades/unidad5/index.html">Unidad 5: Introducción al Estado Sólido</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bibliografia.html">Bibliografía</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="simulaciones.html">Simulaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="evaluacion.html">Evaluación</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="form-check form-switch me-3 mt-1">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label text-light" for="darkModeToggle"><i class="bi bi-moon"></i></label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar..." id="siteSearch">
+                        <button class="btn btn-outline-light" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Contenido Principal -->
+                <div class="col-lg-8 mb-4">
+                    <section class="content-box fade-in">
+                        <h2 class="page-title">Simulaciones Interactivas</h2>
+                        
+                        <p class="lead">Las simulaciones interactivas son herramientas fundamentales para visualizar y comprender los fenómenos cuánticos que, por su naturaleza, son difíciles de intuir. En este curso utilizaremos principalmente las simulaciones de PhET de la Universidad de Colorado, que son gratuitas y de alta calidad.</p>
+                        
+                        <div class="alert alert-info">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <i class="bi bi-info-circle-fill fs-3"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="mb-0">Todas las simulaciones son interactivas y pueden utilizarse directamente desde esta página o accediendo al sitio oficial de PhET. Se recomienda explorar las simulaciones antes de cada sesión correspondiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Filtro de simulaciones -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Filtrar simulaciones por unidad</h5>
+                                <div class="btn-group w-100 mb-3" role="group" aria-label="Filtro de unidades">
+                                    <button type="button" class="btn btn-outline-primary active" onclick="filterSimulations('all')">Todas</button>
+                                    <button type="button" class="btn btn-outline-primary" onclick="filterSimulations('unidad1')">Unidad 1</button>
+                                    <button type="button" class="btn btn-outline-primary" onclick="filterSimulations('unidad2')">Unidad 2</button>
+                                    <button type="button" class="btn btn-outline-primary" onclick="filterSimulations('unidad3')">Unidad 3</button>
+                                    <button type="button" class="btn btn-outline-primary" onclick="filterSimulations('unidad4')">Unidad 4</button>
+                                    <button type="button" class="btn btn-outline-primary" onclick="filterSimulations('unidad5')">Unidad 5</button>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar simulación..." id="simulationSearch">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="searchSimulations()"><i class="bi bi-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Simulaciones -->
+                        <div class="row" id="simulationsContainer">
+                            <!-- Unidad 1: Radiación de Cuerpo Negro -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad1">
+                                <div class="card h-100">
+                                    <img src="../img/sim_blackbody.jpg" class="card-img-top" alt="Simulación de Radiación de Cuerpo Negro">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Radiación de Cuerpo Negro</h5>
+                                        <p class="card-text">Explora la radiación de cuerpo negro a diferentes temperaturas y visualiza la ley de Planck.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 1</span>
+                                            <span class="badge bg-secondary">Sesión 3</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/blackbody-spectrum" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 1: Efecto Fotoeléctrico -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad1">
+                                <div class="card h-100">
+                                    <img src="../img/sim_photoelectric.jpg" class="card-img-top" alt="Simulación del Efecto Fotoeléctrico">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Efecto Fotoeléctrico</h5>
+                                        <p class="card-text">Experimenta con el efecto fotoeléctrico variando la intensidad y frecuencia de la luz.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 1</span>
+                                            <span class="badge bg-secondary">Sesión 4</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/photoelectric" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 1: Modelo de Bohr -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad1">
+                                <div class="card h-100">
+                                    <img src="../img/sim_hydrogen.jpg" class="card-img-top" alt="Simulación del Modelo de Bohr">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Modelo de Bohr</h5>
+                                        <p class="card-text">Visualiza los niveles de energía del átomo de hidrógeno y las transiciones electrónicas.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 1</span>
+                                            <span class="badge bg-secondary">Sesión 5</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/hydrogen-atom" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 2: Interferencia Cuántica -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad2">
+                                <div class="card h-100">
+                                    <img src="../img/sim_quantum_interference.jpg" class="card-img-top" alt="Simulación de Interferencia Cuántica">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Interferencia Cuántica</h5>
+                                        <p class="card-text">Explora el experimento de doble rendija con partículas cuánticas.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 2</span>
+                                            <span class="badge bg-secondary">Sesión 7</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/quantum-wave-interference" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 2: Principio de Incertidumbre -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad2">
+                                <div class="card h-100">
+                                    <img src="../img/sim_uncertainty.jpg" class="card-img-top" alt="Simulación del Principio de Incertidumbre">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Principio de Incertidumbre</h5>
+                                        <p class="card-text">Visualiza el principio de incertidumbre de Heisenberg con paquetes de ondas.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 2</span>
+                                            <span class="badge bg-secondary">Sesión 9</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/fourier-making-waves" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 3: Partícula en una Caja -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad3">
+                                <div class="card h-100">
+                                    <img src="../img/sim_particle_box.jpg" class="card-img-top" alt="Simulación de Partícula en una Caja">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Partícula en una Caja</h5>
+                                        <p class="card-text">Explora los estados cuánticos de una partícula confinada en un pozo de potencial.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 3</span>
+                                            <span class="badge bg-secondary">Sesión 11</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/quantum-bound-states" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 3: Efecto Túnel -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad3">
+                                <div class="card h-100">
+                                    <img src="../img/sim_tunneling.jpg" class="card-img-top" alt="Simulación del Efecto Túnel">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Efecto Túnel</h5>
+                                        <p class="card-text">Visualiza el efecto túnel cuántico a través de barreras de potencial.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 3</span>
+                                            <span class="badge bg-secondary">Sesión 12</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/quantum-tunneling" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 3: Oscilador Armónico -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad3">
+                                <div class="card h-100">
+                                    <img src="../img/sim_harmonic.jpg" class="card-img-top" alt="Simulación del Oscilador Armónico">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Oscilador Armónico</h5>
+                                        <p class="card-text">Explora los estados cuánticos del oscilador armónico y sus funciones de onda.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 3</span>
+                                            <span class="badge bg-secondary">Sesión 13</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/quantum-bound-states" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 4: Átomo de Hidrógeno -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad4">
+                                <div class="card h-100">
+                                    <img src="../img/sim_hydrogen_3d.jpg" class="card-img-top" alt="Simulación del Átomo de Hidrógeno">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Átomo de Hidrógeno 3D</h5>
+                                        <p class="card-text">Visualiza los orbitales atómicos del hidrógeno en tres dimensiones.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 4</span>
+                                            <span class="badge bg-secondary">Sesión 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/hydrogen-atom" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 4: Experimento de Stern-Gerlach -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad4">
+                                <div class="card h-100">
+                                    <img src="../img/sim_stern_gerlach.jpg" class="card-img-top" alt="Simulación del Experimento de Stern-Gerlach">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Experimento de Stern-Gerlach</h5>
+                                        <p class="card-text">Explora el experimento que demostró la cuantización del spin electrónico.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 4</span>
+                                            <span class="badge bg-secondary">Sesión 20</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/stern-gerlach" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 5: Conductividad -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad5">
+                                <div class="card h-100">
+                                    <img src="../img/sim_conductivity.jpg" class="card-img-top" alt="Simulación de Conductividad">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Conductividad</h5>
+                                        <p class="card-text">Explora cómo la estructura de bandas afecta las propiedades eléctricas de los materiales.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 5</span>
+                                            <span class="badge bg-secondary">Sesión 25</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/conductivity" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Unidad 5: Semiconductores -->
+                            <div class="col-md-6 mb-4 simulation-item" data-unit="unidad5">
+                                <div class="card h-100">
+                                    <img src="../img/sim_semiconductor.jpg" class="card-img-top" alt="Simulación de Semiconductores">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Semiconductores</h5>
+                                        <p class="card-text">Visualiza el comportamiento de los semiconductores y las uniones p-n.</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-primary">Unidad 5</span>
+                                            <span class="badge bg-secondary">Sesión 25</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="https://phet.colorado.edu/es/simulations/semiconductor" class="btn btn-primary w-100" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir simulación
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mensaje de no resultados -->
+                        <div id="noResults" class="alert alert-warning text-center" style="display: none;">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                            No se encontraron simulaciones que coincidan con tu búsqueda.
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-heading">Guía de Uso</h3>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Cómo utilizar las simulaciones</h5>
+                                <ol>
+                                    <li>Haz clic en "Abrir simulación" para acceder a la simulación en una nueva pestaña.</li>
+                                    <li>Lee las instrucciones proporcionadas en la simulación.</li>
+                                    <li>Experimenta con los diferentes controles y observa los resultados.</li>
+                                    <li>Relaciona lo observado con los conceptos teóricos estudiados en clase.</li>
+                                    <li>Completa las actividades propuestas en las sesiones correspondientes.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <h3 class="sidebar-heading">Recursos Adicionales</h3>
+                        <div class="list-group mb-4">
+                            <a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="list-group-item list-group-item-action d-flex align-items-center" target="_blank">
+                                <i class="bi bi-box-arrow-up-right me-3 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-1">Colección completa PhET</h5>
+                                    <p class="mb-0 small">Accede a todas las simulaciones de fenómenos cuánticos</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-file-earmark-pdf me-3 text-danger"></i>
+                                <div>
+                                    <h5 class="mb-1">Guías de actividades</h5>
+                                    <p class="mb-0 small">Descarga las guías para cada simulación</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <i class="bi bi-camera-video me-3 text-success"></i>
+                                <div>
+                                    <h5 class="mb-1">Tutoriales en video</h5>
+                                    <p class="mb-0 small">Aprende a utilizar las simulaciones paso a paso</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <h3 class="sidebar-heading">Calendario de Prácticas</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Semana</th>
+                                                <th>Simulación</th>
+                                                <th>Fecha</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Radiación de Cuerpo Negro</td>
+                                                <td>Mayo 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Efecto Fotoeléctrico</td>
+                                                <td>Mayo 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Interferencia Cuántica</td>
+                                                <td>Mayo 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Partícula en una Caja</td>
+                                                <td>Junio 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Efecto Túnel</td>
+                                                <td>Junio 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Átomo de Hidrógeno</td>
+                                                <td>Julio 2025</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>Conductividad</td>
+                                                <td>Agosto 2025</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Física Moderna</h4>
+                    <p>Curso para Ingeniería en Nanotecnología</p>
+                    <p>Periodo: Mayo - Agosto 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="bibliografia.html" class="footer-link">Bibliografía</a></li>
+                        <li><a href="simulaciones.html" class="footer-link">Simulaciones</a></li>
+                        <li><a href="evaluacion.html" class="footer-link">Sistema de Evaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Recursos Externos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="footer-link" target="_blank">PhET Interactive Simulations</a></li>
+                        <li><a href="https://classroom.google.com" class="footer-link" target="_blank">Google Classroom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Física Moderna - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    
+    <!-- Script específico para la página de simulaciones -->
+    <script>
+        // Filtrar simulaciones por unidad
+        function filterSimulations(unit) {
+            const items = document.querySelectorAll('.simulation-item');
+            const buttons = document.querySelectorAll('.btn-group .btn');
+            
+            // Actualizar botones activos
+            buttons.forEach(button => {
+                button.classList.remove('active');
+                if (button.textContent.toLowerCase().includes(unit) || 
+                    (button.textContent === 'Todas' && unit === 'all')) {
+                    button.classList.add('active');
+                }
+            });
+            
+            // Filtrar elementos
+            items.forEach(item => {
+                if (unit === 'all' || item.dataset.unit === unit) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Verificar si hay resultados
+            checkResults();
+        }
+        
+        // Buscar simulaciones
+        function searchSimulations() {
+            const searchTerm = document.getElementById('simulationSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.simulation-item');
+            
+            items.forEach(item => {
+                const title = item.querySelector('.card-title').textContent.toLowerCase();
+                const description = item.querySelector('.card-text').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Verificar si hay resultados
+            checkResults();
+        }
+        
+        // Verificar si hay resultados visibles
+        function checkResults() {
+            const visibleItems = document.querySelectorAll('.simulation-item[style="display: block"]');
+            const noResultsMessage = document.getElementById('noResults');
+            
+            if (visibleItems.length === 0) {
+                noResultsMessage.style.display = 'block';
+            } else {
+                noResultsMessage.style.display = 'none';
+            }
+        }
+        
+        // Escuchar eventos de entrada en el campo de búsqueda
+        document.getElementById('simulationSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                searchSimulations();
+            }
+        });
+    </script>
+</body>
+</html>

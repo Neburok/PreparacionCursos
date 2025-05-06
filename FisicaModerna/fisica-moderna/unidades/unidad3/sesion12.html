@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 12: Efecto Túnel - Física Moderna</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="site-title">Física Moderna</h1>
+                    <p class="lead text-white mb-0">Ingeniería en Nanotecnología - Mayo-Agosto 2025</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-white mb-0"><i class="bi bi-calendar-event"></i> 26 sesiones | <i class="bi bi-clock"></i> 60 horas totales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownUnidades" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Unidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUnidades">
+                            <li><a class="dropdown-item" href="../unidad0/index.html">Unidad 0: Introducción y Diagnóstico</a></li>
+                            <li><a class="dropdown-item" href="../unidad1/index.html">Unidad 1: Fundamentos de Teoría Cuántica</a></li>
+                            <li><a class="dropdown-item" href="../unidad2/index.html">Unidad 2: Dualidad onda-partícula</a></li>
+                            <li><a class="dropdown-item active" href="../unidad3/index.html">Unidad 3: Ecuación de Schrödinger</a></li>
+                            <li><a class="dropdown-item" href="../unidad4/index.html">Unidad 4: Átomos y Estructura</a></li>
+                            <li><a class="dropdown-item" href="../unidad5/index.html">Unidad 5: Introducción al Estado Sólido</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/bibliografia.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/evaluacion.html">Evaluación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Contenido de la Sesión -->
+                <div class="col-md-8 mb-4">
+                    <section class="content-box fade-in">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Unidad 3</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Sesión 12</li>
+                            </ol>
+                        </nav>
+                        
+                        <h2 class="page-title">Sesión 12: Efecto Túnel</h2>
+                        
+                        <div class="alert alert-primary">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <i class="bi bi-info-circle-fill fs-3"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="mb-0"><strong>Semana 6</strong> | Duración: 2 horas | Modalidad: Presencial asistida por tecnología</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Objetivos de la Sesión</h3>
+                            <ul>
+                                <li>Comprender el fenómeno cuántico del efecto túnel y su contraste con la física clásica.</li>
+                                <li>Analizar la transmisión de partículas a través de barreras de potencial.</li>
+                                <li>Calcular coeficientes de transmisión para barreras rectangulares simples.</li>
+                                <li>Explorar aplicaciones tecnológicas del efecto túnel en nanotecnología.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Pestañas de Contenido -->
+                        <div class="mt-4">
+                            <ul class="nav nav-tabs content-tabs" id="sessionContentTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="apuntes-tab" data-bs-toggle="tab" data-bs-target="#apuntes" type="button" role="tab" aria-controls="apuntes" aria-selected="true">Apuntes</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="graficas-tab" data-bs-toggle="tab" data-bs-target="#graficas" type="button" role="tab" aria-controls="graficas" aria-selected="false">Gráficas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="simulaciones-tab" data-bs-toggle="tab" data-bs-target="#simulaciones" type="button" role="tab" aria-controls="simulaciones" aria-selected="false">Simulaciones</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="aplicaciones-tab" data-bs-toggle="tab" data-bs-target="#aplicaciones" type="button" role="tab" aria-controls="aplicaciones" aria-selected="false">Aplicaciones</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="sessionContentTabsContent">
+                                <!-- Apuntes -->
+                                <div class="tab-pane fade show active" id="apuntes" role="tabpanel" aria-labelledby="apuntes-tab">
+                                    <h4>El Efecto Túnel Cuántico</h4>
+                                    
+                                    <h5 class="mt-4">1. Introducción al Efecto Túnel</h5>
+                                    
+                                    <p>El efecto túnel es un fenómeno cuántico que permite a las partículas atravesar barreras de potencial que, según la física clásica, serían infranqueables. Este fenómeno no tiene análogo en la física clásica y es una consecuencia directa de la naturaleza ondulatoria de la materia y del principio de incertidumbre de Heisenberg.</p>
+                                    
+                                    <div class="alert alert-info">
+                                        <h6><i class="bi bi-lightbulb-fill me-2"></i>Contraste con la Física Clásica</h6>
+                                        <p class="mb-0">En la física clásica, una partícula con energía E que encuentra una barrera de potencial V₀ > E será completamente reflejada. En mecánica cuántica, existe una probabilidad no nula de que la partícula "atraviese" la barrera, incluso cuando E < V₀.</p>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">2. Barrera de Potencial Rectangular</h5>
+                                    
+                                    <p>Consideremos una partícula de masa m y energía E que incide sobre una barrera de potencial rectangular de altura V₀ > E y anchura a. Dividimos el espacio en tres regiones:</p>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Región I (x < 0)</h6>
+                                            <p class="card-text">Antes de la barrera, V(x) = 0</p>
+                                            <div class="math-formula">
+                                                <p>ψᵢ(x) = Ae^(ikx) + Be^(-ikx)</p>
+                                                <p>Donde k = √(2mE/ħ²) es el número de onda</p>
+                                                <p>El primer término representa la onda incidente, y el segundo la onda reflejada.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Región II (0 ≤ x ≤ a)</h6>
+                                            <p class="card-text">Dentro de la barrera, V(x) = V₀</p>
+                                            <div class="math-formula">
+                                                <p>ψᵢᵢ(x) = Ce^(κx) + De^(-κx)</p>
+                                                <p>Donde κ = √(2m(V₀-E)/ħ²) es el coeficiente de atenuación</p>
+                                                <p>Observe que para E < V₀, κ es real, lo que da lugar a funciones exponenciales reales (no oscilatorias).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Región III (x > a)</h6>
+                                            <p class="card-text">Después de la barrera, V(x) = 0</p>
+                                            <div class="math-formula">
+                                                <p>ψᵢᵢᵢ(x) = Fe^(ikx)</p>
+                                                <p>Solo hay onda transmitida, no hay onda incidente desde la derecha.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">3. Coeficiente de Transmisión</h5>
+                                    
+                                    <p>Para determinar la probabilidad de que la partícula atraviese la barrera, calculamos el coeficiente de transmisión T, que es la razón entre la densidad de corriente de probabilidad transmitida y la densidad de corriente de probabilidad incidente.</p>
+                                    
+                                    <p>Aplicando las condiciones de continuidad de la función de onda y su derivada en las fronteras (x = 0 y x = a), y después de un cálculo algebraico extenso, se obtiene:</p>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Coeficiente de Transmisión (Caso E < V₀)</h6>
+                                            <div class="math-formula">
+                                                <p>T ≈ 16(E/V₀)(1-E/V₀)e^(-2κa)</p>
+                                                <p>Para barreras anchas y/o altas (κa >> 1)</p>
+                                            </div>
+                                            <p class="card-text">Esta aproximación muestra que la probabilidad de transmisión decrece exponencialmente con la anchura de la barrera y con la raíz cuadrada de la diferencia de energía (V₀-E).</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alert alert-warning">
+                                        <h6><i class="bi bi-exclamation-triangle-fill me-2"></i>Observación Importante</h6>
+                                        <p class="mb-0">Aunque la probabilidad de transmisión disminuye exponencialmente con la anchura de la barrera, nunca llega a ser exactamente cero, lo que significa que siempre existe una probabilidad no nula de que la partícula atraviese la barrera, sin importar cuán ancha sea.</p>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">4. Interpretación Física</h5>
+                                    
+                                    <p>El efecto túnel puede entenderse de varias maneras:</p>
+                                    
+                                    <ul>
+                                        <li><strong>Principio de incertidumbre:</strong> La incertidumbre en la energía de la partícula (ΔE) durante un tiempo corto (Δt) puede permitirle "pedir prestada" energía suficiente para superar la barrera, siempre que cumpla con ΔE·Δt ≥ ħ/2.</li>
+                                        <li><strong>Naturaleza ondulatoria:</strong> La función de onda de la partícula no se anula abruptamente en la barrera, sino que penetra en ella, decayendo exponencialmente. Si la barrera es suficientemente estrecha, la función de onda aún tiene amplitud no nula al otro lado.</li>
+                                        <li><strong>Superposición cuántica:</strong> La partícula existe en una superposición de estados que incluye una componente "dentro de la barrera" y una componente "al otro lado de la barrera".</li>
+                                    </ul>
+                                    
+                                    <h5 class="mt-4">5. Factores que Afectan la Probabilidad de Túnel</h5>
+                                    
+                                    <p>La probabilidad de que ocurra el efecto túnel depende principalmente de tres factores:</p>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Anchura de la barrera (a)</h6>
+                                                    <p class="card-text">La probabilidad disminuye exponencialmente con la anchura: T ∝ e^(-2κa)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Altura de la barrera (V₀-E)</h6>
+                                                    <p class="card-text">La probabilidad disminuye exponencialmente con la raíz cuadrada de la diferencia de energía: T ∝ e^(-2a√(2m(V₀-E)/ħ²))</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Masa de la partícula (m)</h6>
+                                                    <p class="card-text">La probabilidad disminuye exponencialmente con la raíz cuadrada de la masa: T ∝ e^(-2a√(2m(V₀-E)/ħ²))</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>Esto explica por qué el efecto túnel es más significativo para partículas ligeras como electrones y menos probable para objetos macroscópicos.</p>
+                                    
+                                    <h5 class="mt-4">6. Barreras de Potencial Más Complejas</h5>
+                                    
+                                    <p>El análisis anterior se puede extender a barreras de potencial más complejas:</p>
+                                    
+                                    <ul>
+                                        <li><strong>Barreras múltiples:</strong> Dan lugar a fenómenos de resonancia cuando la energía de la partícula coincide con los niveles de energía de los "pozos" entre barreras.</li>
+                                        <li><strong>Barreras con formas arbitrarias:</strong> Se pueden aproximar como una serie de barreras rectangulares delgadas (método WKB).</li>
+                                        <li><strong>Barreras en 3D:</strong> El análisis es similar pero más complejo matemáticamente.</li>
+                                    </ul>
+                                    
+                                    <div class="alert alert-success mt-4">
+                                        <h6><i class="bi bi-check-circle-fill me-2"></i>Resumen</h6>
+                                        <p class="mb-0">El efecto túnel es un fenómeno puramente cuántico que permite a las partículas atravesar barreras de potencial que serían infranqueables según la física clásica. La probabilidad de túnel depende exponencialmente de la anchura de la barrera, la diferencia de energía y la masa de la partícula. Este fenómeno es fundamental para numerosas aplicaciones tecnológicas y procesos naturales.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Gráficas -->
+                                <div class="tab-pane fade" id="graficas" role="tabpanel" aria-labelledby="graficas-tab">
+                                    <h4>Gráficas e Ilustraciones</h4>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/tunnel_effect_potential.jpg" alt="Barrera de potencial rectangular" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 1: Barrera de potencial rectangular. Una partícula con energía E < V₀ incide desde la izquierda. Según la física clásica, la partícula sería completamente reflejada, pero la mecánica cuántica predice una probabilidad no nula de transmisión.</figcaption>
+                                    </div>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/tunnel_effect_wavefunction.jpg" alt="Función de onda en el efecto túnel" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 2: Comportamiento de la función de onda en el efecto túnel. Observe cómo la amplitud de la función de onda decrece exponencialmente dentro de la barrera pero no llega a cero, permitiendo una amplitud no nula en la región III.</figcaption>
+                                    </div>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/tunnel_effect_transmission.jpg" alt="Coeficiente de transmisión vs. energía" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 3: Coeficiente de transmisión T en función de la energía E de la partícula incidente (normalizada respecto a V₀) para diferentes anchuras de barrera. Note cómo T aumenta rápidamente con E y disminuye con la anchura de la barrera.</figcaption>
+                                    </div>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/tunnel_effect_resonance.jpg" alt="Resonancia en barreras múltiples" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 4: Fenómeno de resonancia en una estructura de doble barrera. Para ciertas energías específicas, el coeficiente de transmisión puede aproximarse a 1 (transmisión perfecta) debido a efectos de interferencia constructiva.</figcaption>
+                                    </div>
+                                    
+                                    <div class="card mt-4">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Comparación de Probabilidades de Túnel</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>La siguiente tabla muestra cómo varía la probabilidad relativa de túnel para diferentes partículas y anchuras de barrera, asumiendo la misma diferencia de energía (V₀-E):</p>
+                                            
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>Partícula</th>
+                                                            <th>Masa relativa</th>
+                                                            <th>Barrera de 0.1 nm</th>
+                                                            <th>Barrera de 1 nm</th>
+                                                            <th>Barrera de 10 nm</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Electrón</td>
+                                                            <td>1</td>
+                                                            <td>10⁻¹</td>
+                                                            <td>10⁻¹⁰</td>
+                                                            <td>10⁻¹⁰⁰</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Protón</td>
+                                                            <td>1836</td>
+                                                            <td>10⁻²³</td>
+                                                            <td>10⁻²³⁰</td>
+                                                            <td>≈ 0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Átomo de H</td>
+                                                            <td>1837</td>
+                                                            <td>10⁻²³</td>
+                                                            <td>10⁻²³⁰</td>
+                                                            <td>≈ 0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Molécula de H₂O</td>
+                                                            <td>≈ 18000</td>
+                                                            <td>10⁻⁷⁰</td>
+                                                            <td>≈ 0</td>
+                                                            <td>≈ 0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                            <p class="mt-3">Esta tabla ilustra por qué el efecto túnel es relevante principalmente para partículas subatómicas como electrones y prácticamente inexistente para objetos macroscópicos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Simulaciones -->
+                                <div class="tab-pane fade" id="simulaciones" role="tabpanel" aria-labelledby="simulaciones-tab">
+                                    <h4>Simulaciones Interactivas</h4>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Simulación PhET: Efecto Túnel Cuántico</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Esta simulación interactiva permite explorar el efecto túnel para partículas cuánticas a través de diversas barreras de potencial.</p>
+                                            
+                                            <div class="simulation-container mb-3">
+                                                <iframe src="https://phet.colorado.edu/sims/html/quantum-tunneling/latest/quantum-tunneling_es.html" title="Simulación PhET: Efecto Túnel Cuántico" allowfullscreen></iframe>
+                                            </div>
+                                            
+                                            <h6>Instrucciones para la Simulación:</h6>
+                                            <ol>
+                                                <li>Experimente con diferentes formas de barrera (rectangular, doble barrera, etc.).</li>
+                                                <li>Ajuste la energía de la partícula incidente y observe cómo afecta a la probabilidad de túnel.</li>
+                                                <li>Modifique la anchura y altura de la barrera para ver su efecto en la transmisión.</li>
+                                                <li>Observe la evolución temporal de un paquete de ondas interactuando con la barrera.</li>
+                                                <li>Compare las predicciones cuánticas con las predicciones clásicas.</li>
+                                            </ol>
+                                            
+                                            <div class="text-center mt-3">
+                                                <a href="https://phet.colorado.edu/es/simulations/quantum-tunneling" class="btn btn-outline-primary" target="_blank">
+                                                    <i class="bi bi-box-arrow-up-right me-2"></i>Abrir en nueva ventana
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Actividad con la Simulación</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Preguntas para Exploración:</h6>
+                                            <ol>
+                                                <li>¿Cómo cambia el coeficiente de transmisión cuando la energía de la partícula se aproxima a la altura de la barrera?</li>
+                                                <li>Para una barrera de anchura fija, ¿cómo varía la probabilidad de túnel con la altura de la barrera?</li>
+                                                <li>En el caso de una doble barrera, ¿a qué energías se observan picos de resonancia en la transmisión?</li>
+                                                <li>¿Qué sucede con un paquete de ondas cuando incide sobre una barrera? ¿Qué parte se refleja y qué parte se transmite?</li>
+                                                <li>¿Cómo afecta la forma de la barrera (rectangular, triangular, etc.) a la probabilidad de túnel?</li>
+                                            </ol>
+                                            
+                                            <div class="alert alert-info mt-3">
+                                                <h6><i class="bi bi-lightbulb-fill me-2"></i>Actividad Práctica</h6>
+                                                <p class="mb-0">Utilice la simulación para determinar empíricamente cómo varía el coeficiente de transmisión con la anchura de la barrera. Tome datos para diferentes anchuras manteniendo constantes la energía y la altura de la barrera, y verifique la relación exponencial T ∝ e^(-2κa).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Aplicaciones -->
+                                <div class="tab-pane fade" id="aplicaciones" role="tabpanel" aria-labelledby="aplicaciones-tab">
+                                    <h4>Aplicaciones del Efecto Túnel</h4>
+                                    
+                                    <p>El efecto túnel no es solo una curiosidad teórica, sino un fenómeno con numerosas aplicaciones prácticas y manifestaciones en la naturaleza:</p>
+                                    
+                                    <h5 class="mt-4">1. Aplicaciones en Nanotecnología</h5>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Microscopio de Efecto Túnel (STM)</h6>
+                                                    <p class="card-text">Utiliza la corriente de túnel entre una punta metálica afilada y una superficie conductora para obtener imágenes con resolución atómica. La corriente de túnel varía exponencialmente con la distancia, lo que proporciona una sensibilidad extrema.</p>
+                                                    <p class="card-text">El STM revolucionó la nanociencia al permitir "ver" y manipular átomos individuales.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Diodos Túnel</h6>
+                                                    <p class="card-text">Dispositivos semiconductores que utilizan el efecto túnel para permitir que los electrones atraviesen una barrera de potencial muy estrecha. A diferencia de los diodos convencionales, pueden conmutar extremadamente rápido.</p>
+                                                    <p class="card-text">Los diodos túnel se utilizan en circuitos de alta frecuencia y en detectores de microondas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Memorias Flash</h6>
+                                                    <p class="card-text">Utilizan el efecto túnel para transferir electrones a una "puerta flotante" aislada en un transistor. La presencia o ausencia de carga en esta puerta representa los bits de información (0 o 1).</p>
+                                                    <p class="card-text">Las memorias flash son la base de las unidades USB, tarjetas SD y SSD modernas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Uniones Josephson</h6>
+                                                    <p class="card-text">Consisten en dos superconductores separados por una barrera aislante muy delgada. Los pares de Cooper (pares de electrones) pueden atravesar la barrera por efecto túnel, dando lugar a efectos cuánticos macroscópicos.</p>
+                                                    <p class="card-text">Se utilizan en magnetómetros SQUID, computación cuántica y estándares de voltaje de alta precisión.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">2. Fenómenos Naturales</h5>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Fusión Nuclear Estelar</h6>
+                                                    <p class="card-text">En el interior de las estrellas, los núcleos de hidrógeno deben superar la repulsión coulombiana para fusionarse. A las temperaturas estelares, la energía térmica no es suficiente para superar esta barrera, pero el efecto túnel permite que los núcleos se fusionen a tasas significativas.</p>
+                                                    <p class="card-text">Sin el efecto túnel, las estrellas no podrían generar energía mediante fusión nuclear y el universo sería muy diferente.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Desintegración Alfa</h6>
+                                                    <p class="card-text">Las partículas alfa (núcleos de helio) preformadas dentro de núcleos radiactivos escapan por efecto túnel a través de la barrera de potencial nuclear. La vida media de los isótopos está directamente relacionada con la probabilidad de túnel.</p>
+                                                    <p class="card-text">Este fue uno de los primeros fenómenos explicados mediante el efecto túnel, por Gamow, Gurney y Condon en 1928.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Fotosíntesis</h6>
+                                                    <p class="card-text">Investigaciones recientes sugieren que el efecto túnel juega un papel importante en la transferencia de electrones durante la fotosíntesis, contribuyendo a su alta eficiencia.</p>
+                                                    <p class="card-text">Este es un ejemplo de cómo los sistemas biológicos pueden aprovechar efectos cuánticos incluso a temperatura ambiente.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Catálisis Enzimática</h6>
+                                                    <p class="card-text">El efecto túnel de protones e incluso átomos más pesados puede acelerar ciertas reacciones enzimáticas, permitiendo que ocurran a tasas mucho más rápidas de lo que sería posible clásicamente.</p>
+                                                    <p class="card-text">Este mecanismo es especialmente importante a bajas temperaturas, donde la energía térmica es insuficiente para superar las barreras de activación.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">3. Aplicaciones Emergentes</h5>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Transistores de Efecto Túnel</h6>
+                                                    <p class="card-text">Nuevos tipos de transistores que utilizan el efecto túnel para superar las limitaciones de los transistores convencionales, permitiendo dispositivos más pequeños y eficientes energéticamente.</p>
+                                                    <p class="card-text">Ejemplos incluyen los TFETs (Tunnel Field-Effect Transistors) y los RTDs (Resonant Tunneling Diodes).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Computación Cuántica</h6>
+                                                    <p class="card-text">El efecto túnel es fundamental en muchas implementaciones de qubits, como los qubits superconductores basados en uniones Josephson.</p>
+                                                    <p class="card-text">También se utiliza en procesos de inicialización y lectura de estados cuánticos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alert alert-success mt-4">
+                                        <h6><i class="bi bi-lightbulb-fill me-2"></i>Perspectivas para la Nanotecnología</h6>
+                                        <p class="mb-0">El efecto túnel es especialmente relevante en nanotecnología porque las dimensiones típicas de los nanodispositivos (1-100 nm) son comparables a las longitudes características del efecto túnel para electrones. Esto presenta tanto desafíos (corrientes de fuga en transistores) como oportunidades (nuevos dispositivos basados en el túnel). Comprender y controlar el efecto túnel es esencial para el desarrollo de la nanoelectrónica del futuro.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navegación entre sesiones -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>Volver a la Unidad
+                            </a>
+                            <a href="sesion13.html" class="btn btn-primary">
+                                Siguiente Sesión<i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-md-4">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-heading">Navegación de Unidad</h3>
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav-item">
+                                <a href="index.html" class="sidebar-nav-link">
+                                    <i class="bi bi-house-door me-2"></i>Inicio de Unidad 3
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion11.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 11: Partícula en una Caja
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion12.html" class="sidebar-nav-link active">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 12: Efecto Túnel
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion13.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 13: Oscilador Armónico
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion14.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 14: Aplicaciones Tecnológicas
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion15.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 15: Repaso y Evaluación
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion16.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 16: Laboratorio Virtual
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="sidebar-heading mt-4">Información de la Sesión</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <p><strong><i class="bi bi-calendar-event me-2"></i>Fecha:</strong> Junio 2025</p>
+                                <p><strong><i class="bi bi-clock me-2"></i>Duración:</strong> 2 horas</p>
+                                <p><strong><i class="bi bi-geo-alt me-2"></i>Modalidad:</strong> Presencial asistida por tecnología</p>
+                                <p><strong><i class="bi bi-person me-2"></i>Profesor:</strong> Por asignar</p>
+                                <hr>
+                                <p><strong><i class="bi bi-book me-2"></i>Lecturas Recomendadas:</strong></p>
+                                <ul class="mb-0">
+                                    <li>Serway, R. A. Física Moderna, Cap. 6.5</li>
+                                    <li>Eisberg, R. Física Cuántica, Cap. 6.3-6.4</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3 class="sidebar-heading mt-4">Conceptos Clave</h3>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Efecto Túnel</h5>
+                                <p class="mb-0">Fenómeno cuántico que permite a las partículas atravesar barreras de potencial que serían infranqueables según la física clásica.</p>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Coeficiente de Transmisión</h5>
+                                <p class="mb-0">Probabilidad de que una partícula atraviese una barrera de potencial por efecto túnel.</p>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Barrera de Potencial</h5>
+                                <p class="mb-0">Región del espacio donde el potencial es mayor que la energía de la partícula incidente.</p>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Microscopio de Efecto Túnel</h5>
+                                <p class="mb-0">Instrumento que utiliza la corriente de túnel entre una punta y una superficie para obtener imágenes con resolución atómica.</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Física Moderna</h4>
+                    <p>Curso para Ingeniería en Nanotecnología</p>
+                    <p>Periodo: Mayo - Agosto 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="../../recursos/bibliografia.html" class="footer-link">Bibliografía</a></li>
+                        <li><a href="../../recursos/simulaciones.html" class="footer-link">Simulaciones</a></li>
+                        <li><a href="../../recursos/evaluacion.html" class="footer-link">Sistema de Evaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Recursos Externos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="footer-link" target="_blank">PhET Interactive Simulations</a></li>
+                        <li><a href="https://classroom.google.com" class="footer-link" target="_blank">Google Classroom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Física Moderna - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>

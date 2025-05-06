@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="{{ "/" | relative_url }}">
+        {% if site.logo %}
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="site-logo">
+        {% endif %}
+        {{ site.title }}
+      </a>
+      <nav class="site-nav">
+        <a href="{{ "/" | relative_url }}">Inicio</a>
+        <a href="{{ "/cursos" | relative_url }}">Cursos</a>
+        <a href="{{ "/materiales" | relative_url }}">Materiales</a>
+        <a href="{{ "/about" | relative_url }}">Acerca de</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <p>{{ site.description }}</p>
+        </div>
+        <div class="footer-col">
+          <p>{{ site.institucion }}</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

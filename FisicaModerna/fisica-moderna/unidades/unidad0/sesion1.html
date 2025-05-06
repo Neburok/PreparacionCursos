@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 1: Presentación del Curso - Física Moderna</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="site-title">Física Moderna</h1>
+                    <p class="lead text-white mb-0">Ingeniería en Nanotecnología - Mayo-Agosto 2025</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-white mb-0"><i class="bi bi-calendar-event"></i> 26 sesiones | <i class="bi bi-clock"></i> 60 horas totales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownUnidades" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Unidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUnidades">
+                            <li><a class="dropdown-item active" href="../unidad0/index.html">Unidad 0: Introducción y Diagnóstico</a></li>
+                            <li><a class="dropdown-item" href="../unidad1/index.html">Unidad 1: Fundamentos de Teoría Cuántica</a></li>
+                            <li><a class="dropdown-item" href="../unidad2/index.html">Unidad 2: Dualidad onda-partícula</a></li>
+                            <li><a class="dropdown-item" href="../unidad3/index.html">Unidad 3: Ecuación de Schrödinger</a></li>
+                            <li><a class="dropdown-item" href="../unidad4/index.html">Unidad 4: Átomos y Estructura</a></li>
+                            <li><a class="dropdown-item" href="../unidad5/index.html">Unidad 5: Introducción al Estado Sólido</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/bibliografia.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/evaluacion.html">Evaluación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Contenido de la Sesión -->
+                <div class="col-md-8 mb-4">
+                    <section class="content-box fade-in">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Unidad 0</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Sesión 1</li>
+                            </ol>
+                        </nav>
+                        
+                        <h2 class="page-title">Sesión 1: Presentación del Curso</h2>
+                        
+                        <div class="alert alert-primary">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <i class="bi bi-info-circle-fill fs-3"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="mb-0"><strong>Semana 1</strong> | Duración: 2 horas | Modalidad: Presencial asistida por tecnología</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Objetivos de la Sesión</h3>
+                            <ul>
+                                <li>Conocer la estructura general del curso, metodología y sistema de evaluación.</li>
+                                <li>Comprender el uso ético y efectivo de herramientas de IA como apoyo al aprendizaje.</li>
+                                <li>Identificar los conocimientos previos mediante un cuestionario diagnóstico.</li>
+                                <li>Establecer expectativas claras sobre el desarrollo del curso.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Pestañas de Contenido -->
+                        <div class="mt-4">
+                            <ul class="nav nav-tabs content-tabs" id="sessionContentTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="apuntes-tab" data-bs-toggle="tab" data-bs-target="#apuntes" type="button" role="tab" aria-controls="apuntes" aria-selected="true">Apuntes</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="presentacion-tab" data-bs-toggle="tab" data-bs-target="#presentacion" type="button" role="tab" aria-controls="presentacion" aria-selected="false">Presentación</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="actividades-tab" data-bs-toggle="tab" data-bs-target="#actividades" type="button" role="tab" aria-controls="actividades" aria-selected="false">Actividades</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="recursos-tab" data-bs-toggle="tab" data-bs-target="#recursos" type="button" role="tab" aria-controls="recursos" aria-selected="false">Recursos</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="sessionContentTabsContent">
+                                <!-- Apuntes -->
+                                <div class="tab-pane fade show active" id="apuntes" role="tabpanel" aria-labelledby="apuntes-tab">
+                                    <h4>Introducción al Curso de Física Moderna</h4>
+                                    
+                                    <p>La Física Moderna representa un cambio paradigmático en nuestra comprensión del universo. A diferencia de la Física Clásica, que describe adecuadamente los fenómenos macroscópicos a velocidades mucho menores que la de la luz, la Física Moderna aborda el comportamiento de la materia y la energía en condiciones extremas: a escala atómica y subatómica, a velocidades cercanas a la de la luz, o en campos gravitatorios intensos.</p>
+                                    
+                                    <p>Este curso se enfoca en los fundamentos cuánticos de la Física Moderna, que son esenciales para comprender el comportamiento de los materiales nanoestructurados, objeto de estudio principal de la Ingeniería en Nanotecnología.</p>
+                                    
+                                    <h5 class="mt-4">Estructura del Curso</h5>
+                                    
+                                    <p>El curso está organizado en seis unidades temáticas que abarcan desde los fundamentos históricos hasta las aplicaciones en materiales:</p>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Unidad 0: Introducción y Diagnóstico</h6>
+                                            <p class="card-text">Presentación del curso y repaso de conceptos fundamentales del electromagnetismo clásico.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Unidad 1: Fundamentos de Teoría Cuántica</h6>
+                                            <p class="card-text">Radiación de cuerpo negro, efecto fotoeléctrico, modelo de Bohr y espectros atómicos.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Unidad 2: Dualidad onda-partícula</h6>
+                                            <p class="card-text">Hipótesis de De Broglie, difracción de electrones y principio de incertidumbre de Heisenberg.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Unidad 3: Ecuación de Schrödinger</h6>
+                                            <p class="card-text">Función de onda, ecuación de Schrödinger, partícula en una caja y efecto túnel.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Unidad 4: Átomos y Estructura</h6>
+                                            <p class="card-text">Átomo de hidrógeno, números cuánticos, orbitales atómicos y principio de exclusión de Pauli.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Unidad 5: Introducción al Estado Sólido</h6>
+                                            <p class="card-text">Redes cristalinas, teoría de bandas y clasificación de materiales.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Metodología de Enseñanza-Aprendizaje</h5>
+                                    
+                                    <p>Este curso adopta un enfoque de aprendizaje activo apoyado en tecnología, combinando:</p>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Sesiones Sincrónicas</h6>
+                                                    <ul>
+                                                        <li>Exposición dialogada</li>
+                                                        <li>Resolución guiada de problemas</li>
+                                                        <li>Trabajo con simulaciones</li>
+                                                        <li>Discusión y colaboración</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Actividades Asincrónicas</h6>
+                                                    <ul>
+                                                        <li>Resolución de problemas</li>
+                                                        <li>Uso de herramientas IA</li>
+                                                        <li>Reportes de simulación</li>
+                                                        <li>Foros de discusión</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Uso Ético de Herramientas de IA</h5>
+                                    
+                                    <p>Las herramientas de Inteligencia Artificial pueden ser un valioso apoyo para el aprendizaje cuando se utilizan de manera ética y efectiva. En este curso, se fomentará el uso de asistentes de IA para:</p>
+                                    
+                                    <ul>
+                                        <li>Profundizar en conceptos complejos</li>
+                                        <li>Obtener explicaciones alternativas</li>
+                                        <li>Verificar pasos en la resolución de problemas</li>
+                                        <li>Buscar información complementaria o aplicaciones</li>
+                                    </ul>
+                                    
+                                    <div class="alert alert-warning">
+                                        <h6><i class="bi bi-exclamation-triangle-fill me-2"></i>Importante</h6>
+                                        <p class="mb-0">El uso de IA debe ser declarado y nunca sustituir el proceso de aprendizaje. Copiar respuestas sin comprensión se considera plagio y no contribuye al desarrollo de competencias.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Presentación -->
+                                <div class="tab-pane fade" id="presentacion" role="tabpanel" aria-labelledby="presentacion-tab">
+                                    <h4>Presentación del Curso</h4>
+                                    
+                                    <div class="text-center mb-4">
+                                        <img src="../../img/presentacion_placeholder.jpg" alt="Diapositiva de presentación" class="img-fluid rounded shadow" style="max-width: 600px;">
+                                        <p class="text-muted mt-2">Diapositiva de ejemplo (imagen ilustrativa)</p>
+                                    </div>
+                                    
+                                    <p>La presentación completa del curso incluye:</p>
+                                    
+                                    <ul>
+                                        <li>Objetivos y competencias a desarrollar</li>
+                                        <li>Estructura detallada de las unidades temáticas</li>
+                                        <li>Metodología de enseñanza-aprendizaje</li>
+                                        <li>Sistema de evaluación</li>
+                                        <li>Recursos y herramientas disponibles</li>
+                                        <li>Calendario de actividades</li>
+                                    </ul>
+                                    
+                                    <div class="text-center mt-4">
+                                        <a href="#" class="btn btn-primary">
+                                            <i class="bi bi-file-earmark-pdf me-2"></i>Descargar presentación completa (PDF)
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Actividades -->
+                                <div class="tab-pane fade" id="actividades" role="tabpanel" aria-labelledby="actividades-tab">
+                                    <h4>Actividades de la Sesión</h4>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Actividad 1: Presentación y Expectativas</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Descripción</h6>
+                                            <p>Dinámica de presentación y discusión sobre expectativas del curso.</p>
+                                            
+                                            <h6>Instrucciones</h6>
+                                            <ol>
+                                                <li>Presentación breve de cada estudiante (nombre, intereses, experiencia previa en física).</li>
+                                                <li>Compartir expectativas sobre el curso y áreas de interés específicas.</li>
+                                                <li>Discusión grupal sobre la relevancia de la física moderna en la nanotecnología.</li>
+                                            </ol>
+                                            
+                                            <h6>Duración</h6>
+                                            <p>30 minutos</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Actividad 2: Uso Ético de IA en el Aprendizaje</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Descripción</h6>
+                                            <p>Discusión sobre el uso ético y efectivo de herramientas de IA como apoyo al aprendizaje.</p>
+                                            
+                                            <h6>Instrucciones</h6>
+                                            <ol>
+                                                <li>Presentación de ejemplos de uso adecuado e inadecuado de IA en contextos académicos.</li>
+                                                <li>Discusión en pequeños grupos sobre escenarios específicos.</li>
+                                                <li>Establecimiento de pautas comunes para el uso de IA durante el curso.</li>
+                                            </ol>
+                                            
+                                            <h6>Duración</h6>
+                                            <p>20 minutos</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Actividad 3: Cuestionario Diagnóstico</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Descripción</h6>
+                                            <p>Evaluación diagnóstica para identificar conocimientos previos en física clásica y conceptos básicos de física moderna.</p>
+                                            
+                                            <h6>Instrucciones</h6>
+                                            <ol>
+                                                <li>Completar el cuestionario diagnóstico en Google Forms.</li>
+                                                <li>El cuestionario incluye preguntas sobre electromagnetismo, ondas, mecánica y conceptos introductorios de física moderna.</li>
+                                                <li>No se asigna calificación, es solo para identificar áreas de oportunidad.</li>
+                                            </ol>
+                                            
+                                            <h6>Duración</h6>
+                                            <p>40 minutos</p>
+                                            
+                                            <div class="text-center mt-3">
+                                                <a href="#" class="btn btn-outline-primary">
+                                                    <i class="bi bi-link-45deg me-2"></i>Acceder al cuestionario diagnóstico
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Recursos -->
+                                <div class="tab-pane fade" id="recursos" role="tabpanel" aria-labelledby="recursos-tab">
+                                    <h4>Recursos Complementarios</h4>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-info text-white">
+                                            <h5 class="card-title mb-0">Documentos</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-pdf text-danger me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">Syllabus completo del curso</h6>
+                                                        <p class="text-muted mb-0">Documento detallado con toda la información del curso</p>
+                                                    </div>
+                                                    <a href="#" class="btn btn-sm btn-outline-primary ms-auto">Descargar</a>
+                                                </li>
+                                                <li class="list-group-item d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-text text-primary me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">Guía para el uso de herramientas de IA</h6>
+                                                        <p class="text-muted mb-0">Recomendaciones y mejores prácticas</p>
+                                                    </div>
+                                                    <a href="#" class="btn btn-sm btn-outline-primary ms-auto">Descargar</a>
+                                                </li>
+                                                <li class="list-group-item d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-text text-primary me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">Calendario de actividades</h6>
+                                                        <p class="text-muted mb-0">Cronograma detallado del curso</p>
+                                                    </div>
+                                                    <a href="#" class="btn btn-sm btn-outline-primary ms-auto">Descargar</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-info text-white">
+                                            <h5 class="card-title mb-0">Enlaces Útiles</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item d-flex align-items-center">
+                                                    <i class="bi bi-google text-danger me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">Google Classroom del curso</h6>
+                                                        <p class="text-muted mb-0">Plataforma principal para entrega de tareas y comunicación</p>
+                                                    </div>
+                                                    <a href="https://classroom.google.com" target="_blank" class="btn btn-sm btn-outline-primary ms-auto">Acceder</a>
+                                                </li>
+                                                <li class="list-group-item d-flex align-items-center">
+                                                    <i class="bi bi-laptop text-success me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">PhET Interactive Simulations</h6>
+                                                        <p class="text-muted mb-0">Simulaciones interactivas de física</p>
+                                                    </div>
+                                                    <a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" target="_blank" class="btn btn-sm btn-outline-primary ms-auto">Acceder</a>
+                                                </li>
+                                                <li class="list-group-item d-flex align-items-center">
+                                                    <i class="bi bi-journal-text text-primary me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">Biblioteca digital de la universidad</h6>
+                                                        <p class="text-muted mb-0">Acceso a libros y artículos científicos</p>
+                                                    </div>
+                                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary ms-auto">Acceder</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navegación entre sesiones -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>Volver a la Unidad
+                            </a>
+                            <a href="sesion2.html" class="btn btn-primary">
+                                Siguiente Sesión<i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-md-4">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-heading">Navegación de Unidad</h3>
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav-item">
+                                <a href="index.html" class="sidebar-nav-link">
+                                    <i class="bi bi-house-door me-2"></i>Inicio de Unidad 0
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion1.html" class="sidebar-nav-link active">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 1: Presentación del Curso
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion2.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 2: Repaso EM Clásico
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="sidebar-heading mt-4">Información de la Sesión</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <p><strong><i class="bi bi-calendar-event me-2"></i>Fecha:</strong> Mayo 2025</p>
+                                <p><strong><i class="bi bi-clock me-2"></i>Duración:</strong> 2 horas</p>
+                                <p><strong><i class="bi bi-geo-alt me-2"></i>Modalidad:</strong> Presencial asistida por tecnología</p>
+                                <p><strong><i class="bi bi-person me-2"></i>Profesor:</strong> Por asignar</p>
+                                <hr>
+                                <p><strong><i class="bi bi-check-circle me-2"></i>Tipo de Evaluación:</strong> Diagnóstica</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="sidebar-heading mt-4">Próximas Actividades</h3>
+                        <div class="list-group">
+                            <a href="sesion2.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Sesión 2: Repaso EM Clásico</h5>
+                                    <small>Semana 1</small>
+                                </div>
+                                <p class="mb-1">Repaso de ondas electromagnéticas y ecuaciones de Maxwell.</p>
+                            </a>
+                            <a href="../unidad1/sesion3.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Sesión 3: Crisis Clásica y Cuantización</h5>
+                                    <small>Semana 2</small>
+                                </div>
+                                <p class="mb-1">Radiación de cuerpo negro y Ley de Planck.</p>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Física Moderna</h4>
+                    <p>Curso para Ingeniería en Nanotecnología</p>
+                    <p>Periodo: Mayo - Agosto 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="../../recursos/bibliografia.html" class="footer-link">Bibliografía</a></li>
+                        <li><a href="../../recursos/simulaciones.html" class="footer-link">Simulaciones</a></li>
+                        <li><a href="../../recursos/evaluacion.html" class="footer-link">Sistema de Evaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Recursos Externos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="footer-link" target="_blank">PhET Interactive Simulations</a></li>
+                        <li><a href="https://classroom.google.com" class="footer-link" target="_blank">Google Classroom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Física Moderna - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 3: Crisis Clásica y Cuantización - Física Moderna</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="site-title">Física Moderna</h1>
+                    <p class="lead text-white mb-0">Ingeniería en Nanotecnología - Mayo-Agosto 2025</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-white mb-0"><i class="bi bi-calendar-event"></i> 26 sesiones | <i class="bi bi-clock"></i> 60 horas totales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownUnidades" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Unidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUnidades">
+                            <li><a class="dropdown-item" href="../unidad0/index.html">Unidad 0: Introducción y Diagnóstico</a></li>
+                            <li><a class="dropdown-item active" href="../unidad1/index.html">Unidad 1: Fundamentos de Teoría Cuántica</a></li>
+                            <li><a class="dropdown-item" href="../unidad2/index.html">Unidad 2: Dualidad onda-partícula</a></li>
+                            <li><a class="dropdown-item" href="../unidad3/index.html">Unidad 3: Ecuación de Schrödinger</a></li>
+                            <li><a class="dropdown-item" href="../unidad4/index.html">Unidad 4: Átomos y Estructura</a></li>
+                            <li><a class="dropdown-item" href="../unidad5/index.html">Unidad 5: Introducción al Estado Sólido</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/bibliografia.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/evaluacion.html">Evaluación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Contenido de la Sesión -->
+                <div class="col-md-8 mb-4">
+                    <section class="content-box fade-in">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Unidad 1</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Sesión 3</li>
+                            </ol>
+                        </nav>
+                        
+                        <h2 class="page-title">Sesión 3: Crisis Clásica y Cuantización</h2>
+                        
+                        <div class="alert alert-primary">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <i class="bi bi-info-circle-fill fs-3"></i>
+                                </div>
+                                <div class="col">
+                                    <p class="mb-0"><strong>Semana 2</strong> | Duración: 2 horas | Modalidad: Presencial asistida por tecnología</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Objetivos de la Sesión</h3>
+                            <ul>
+                                <li>Comprender el problema de la radiación de cuerpo negro y las limitaciones de la física clásica para explicarlo.</li>
+                                <li>Analizar la solución propuesta por Max Planck y el concepto de cuantización de la energía.</li>
+                                <li>Aplicar la ley de Planck para calcular la distribución espectral de la radiación de cuerpo negro.</li>
+                                <li>Visualizar el fenómeno mediante simulaciones interactivas.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Pestañas de Contenido -->
+                        <div class="mt-4">
+                            <ul class="nav nav-tabs content-tabs" id="sessionContentTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="apuntes-tab" data-bs-toggle="tab" data-bs-target="#apuntes" type="button" role="tab" aria-controls="apuntes" aria-selected="true">Apuntes</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="graficas-tab" data-bs-toggle="tab" data-bs-target="#graficas" type="button" role="tab" aria-controls="graficas" aria-selected="false">Gráficas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="simulaciones-tab" data-bs-toggle="tab" data-bs-target="#simulaciones" type="button" role="tab" aria-controls="simulaciones" aria-selected="false">Simulaciones</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="problemas-tab" data-bs-toggle="tab" data-bs-target="#problemas" type="button" role="tab" aria-controls="problemas" aria-selected="false">Problemas</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="sessionContentTabsContent">
+                                <!-- Apuntes -->
+                                <div class="tab-pane fade show active" id="apuntes" role="tabpanel" aria-labelledby="apuntes-tab">
+                                    <h4>Radiación de Cuerpo Negro y Ley de Planck</h4>
+                                    
+                                    <h5 class="mt-4">1. El Problema de la Radiación de Cuerpo Negro</h5>
+                                    
+                                    <p>Un <strong>cuerpo negro</strong> es un objeto idealizado que absorbe toda la radiación electromagnética que incide sobre él, sin reflejar nada. A una temperatura dada, un cuerpo negro emite radiación con un espectro característico que depende únicamente de su temperatura, no de su composición.</p>
+                                    
+                                    <p>A finales del siglo XIX, los físicos intentaron explicar la distribución espectral de la radiación de cuerpo negro utilizando las leyes de la física clásica. Surgieron dos aproximaciones principales:</p>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Ley de Rayleigh-Jeans (Aproximación clásica)</h6>
+                                            <p class="card-text">Basada en el principio de equipartición de la energía, predecía correctamente la distribución espectral para longitudes de onda largas (bajas frecuencias), pero fallaba catastróficamente para longitudes de onda cortas (altas frecuencias).</p>
+                                            <div class="math-formula">
+                                                <p>u(λ,T) = (8πkT)/λ⁴</p>
+                                                <p>Donde:</p>
+                                                <ul>
+                                                    <li>u(λ,T) es la densidad de energía por unidad de volumen y longitud de onda</li>
+                                                    <li>k es la constante de Boltzmann</li>
+                                                    <li>T es la temperatura absoluta</li>
+                                                    <li>λ es la longitud de onda</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Ley de Wien (Aproximación empírica)</h6>
+                                            <p class="card-text">Ajustaba bien los datos experimentales para longitudes de onda cortas (altas frecuencias), pero fallaba para longitudes de onda largas (bajas frecuencias).</p>
+                                            <div class="math-formula">
+                                                <p>u(λ,T) = (8πhc/λ⁵) · e^(-hc/λkT)</p>
+                                                <p>Donde h es una constante (posteriormente identificada como la constante de Planck).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alert alert-warning">
+                                        <h6><i class="bi bi-exclamation-triangle-fill me-2"></i>La Catástrofe Ultravioleta</h6>
+                                        <p class="mb-0">La ley de Rayleigh-Jeans predecía que la intensidad de la radiación tendería a infinito a medida que la longitud de onda se acercaba a cero (o la frecuencia a infinito). Este absurdo físico se conoció como la "catástrofe ultravioleta" y representaba una clara evidencia de que la física clásica era incapaz de explicar el fenómeno.</p>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">2. La Solución de Planck: Cuantización de la Energía</h5>
+                                    
+                                    <p>En 1900, Max Planck propuso una solución revolucionaria al problema. Planck sugirió que la energía no se emite ni se absorbe de manera continua, como suponía la física clásica, sino en pequeños "paquetes" o "cuantos" de energía.</p>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Hipótesis de Planck</h6>
+                                            <p class="card-text">La energía de un oscilador electromagnético de frecuencia ν solo puede tomar valores discretos dados por:</p>
+                                            <div class="math-formula">
+                                                <p>E = nhν</p>
+                                                <p>Donde:</p>
+                                                <ul>
+                                                    <li>n es un número entero (n = 0, 1, 2, ...)</li>
+                                                    <li>h es una constante universal (constante de Planck)</li>
+                                                    <li>ν es la frecuencia del oscilador</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>Esta hipótesis implicaba que la energía está <strong>cuantizada</strong>, es decir, solo puede cambiar en cantidades discretas (múltiplos enteros de hν), no de forma continua como suponía la física clásica.</p>
+                                    
+                                    <h5 class="mt-4">3. La Ley de Planck</h5>
+                                    
+                                    <p>Utilizando su hipótesis de cuantización, Planck derivó una fórmula que describía perfectamente la distribución espectral de la radiación de cuerpo negro a cualquier temperatura:</p>
+                                    
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Ley de Planck</h6>
+                                            <div class="math-formula">
+                                                <p>u(λ,T) = (8πhc/λ⁵) · [1/(e^(hc/λkT) - 1)]</p>
+                                                <p>O en términos de frecuencia:</p>
+                                                <p>u(ν,T) = (8πhν³/c³) · [1/(e^(hν/kT) - 1)]</p>
+                                                <p>Donde:</p>
+                                                <ul>
+                                                    <li>h = 6.626 × 10^(-34) J·s (constante de Planck)</li>
+                                                    <li>c es la velocidad de la luz</li>
+                                                    <li>k es la constante de Boltzmann</li>
+                                                    <li>T es la temperatura absoluta</li>
+                                                    <li>λ es la longitud de onda</li>
+                                                    <li>ν es la frecuencia</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>La ley de Planck reproduce correctamente los resultados experimentales en todo el rango de longitudes de onda y temperaturas. Además:</p>
+                                    
+                                    <ul>
+                                        <li>Para longitudes de onda largas (bajas frecuencias), se reduce a la ley de Rayleigh-Jeans.</li>
+                                        <li>Para longitudes de onda cortas (altas frecuencias), se reduce a la ley de Wien.</li>
+                                    </ul>
+                                    
+                                    <h5 class="mt-4">4. Implicaciones y Consecuencias</h5>
+                                    
+                                    <p>La hipótesis de Planck marcó el nacimiento de la física cuántica. Aunque inicialmente Planck consideró la cuantización como un "truco matemático" para resolver el problema de la radiación de cuerpo negro, pronto quedó claro que representaba un cambio fundamental en nuestra comprensión de la naturaleza.</p>
+                                    
+                                    <p>Algunas consecuencias importantes:</p>
+                                    
+                                    <ul>
+                                        <li>La energía no es continua sino discreta (cuantizada) a nivel microscópico.</li>
+                                        <li>La constante de Planck (h) representa un límite fundamental en la naturaleza, estableciendo la escala a la que los efectos cuánticos se vuelven importantes.</li>
+                                        <li>La física clásica es una aproximación válida solo cuando los cuantos de energía (hν) son muy pequeños comparados con las energías macroscópicas.</li>
+                                    </ul>
+                                    
+                                    <p>Einstein posteriormente extendería esta idea de cuantización a la luz misma (fotones) para explicar el efecto fotoeléctrico, tema que abordaremos en la siguiente sesión.</p>
+                                </div>
+                                
+                                <!-- Gráficas -->
+                                <div class="tab-pane fade" id="graficas" role="tabpanel" aria-labelledby="graficas-tab">
+                                    <h4>Gráficas e Ilustraciones</h4>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/blackbody_spectrum.jpg" alt="Espectro de radiación de cuerpo negro" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 1: Distribución espectral de la radiación de cuerpo negro a diferentes temperaturas. Las curvas muestran la intensidad de radiación en función de la longitud de onda para cuerpos negros a 3000K, 4000K y 5000K.</figcaption>
+                                    </div>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/rayleigh_jeans_vs_planck.jpg" alt="Comparación entre la ley de Rayleigh-Jeans y la ley de Planck" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 2: Comparación entre la ley de Rayleigh-Jeans (línea punteada) y la ley de Planck (línea continua). Observe cómo la ley de Rayleigh-Jeans diverge a longitudes de onda cortas (catástrofe ultravioleta), mientras que la ley de Planck se ajusta a los datos experimentales (puntos).</figcaption>
+                                    </div>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/wien_displacement_law.jpg" alt="Ley de desplazamiento de Wien" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 3: Ilustración de la ley de desplazamiento de Wien. A medida que aumenta la temperatura, el pico de emisión se desplaza hacia longitudes de onda más cortas (frecuencias más altas).</figcaption>
+                                    </div>
+                                    
+                                    <div class="figure text-center mb-4">
+                                        <img src="../../img/energy_quantization.jpg" alt="Cuantización de la energía" class="figure-img img-fluid rounded shadow" style="max-width: 600px;">
+                                        <figcaption class="figure-caption">Figura 4: Representación esquemática de la cuantización de la energía. A diferencia del modelo clásico (izquierda) donde la energía puede tomar cualquier valor continuo, en el modelo cuántico de Planck (derecha) la energía solo puede tomar valores discretos separados por hν.</figcaption>
+                                    </div>
+                                </div>
+                                
+                                <!-- Simulaciones -->
+                                <div class="tab-pane fade" id="simulaciones" role="tabpanel" aria-labelledby="simulaciones-tab">
+                                    <h4>Simulaciones Interactivas</h4>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Simulación PhET: Radiación de Cuerpo Negro</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Esta simulación interactiva permite explorar la radiación de cuerpo negro a diferentes temperaturas y visualizar cómo cambia el espectro de emisión.</p>
+                                            
+                                            <div class="simulation-container mb-3">
+                                                <iframe src="https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_es.html" title="Simulación PhET: Radiación de Cuerpo Negro" allowfullscreen></iframe>
+                                            </div>
+                                            
+                                            <h6>Instrucciones para la Simulación:</h6>
+                                            <ol>
+                                                <li>Ajuste el control deslizante de temperatura y observe cómo cambia la curva de radiación.</li>
+                                                <li>Note cómo el pico de emisión se desplaza hacia longitudes de onda más cortas a medida que aumenta la temperatura (ley de desplazamiento de Wien).</li>
+                                                <li>Compare las predicciones de la ley de Rayleigh-Jeans y la ley de Planck activando las opciones correspondientes.</li>
+                                                <li>Observe el color del cuerpo negro y cómo cambia con la temperatura.</li>
+                                            </ol>
+                                            
+                                            <div class="text-center mt-3">
+                                                <a href="https://phet.colorado.edu/es/simulations/blackbody-spectrum" class="btn btn-outline-primary" target="_blank">
+                                                    <i class="bi bi-box-arrow-up-right me-2"></i>Abrir en nueva ventana
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="card-title mb-0">Actividad con la Simulación</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Preguntas para Exploración:</h6>
+                                            <ol>
+                                                <li>¿Qué sucede con la intensidad total de radiación (área bajo la curva) cuando se duplica la temperatura?</li>
+                                                <li>¿Cómo se relaciona la longitud de onda del pico de emisión con la temperatura? Verifique la ley de Wien: λ<sub>max</sub> = b/T, donde b ≈ 2.9 × 10<sup>-3</sup> m·K.</li>
+                                                <li>¿En qué rango de longitudes de onda la ley de Rayleigh-Jeans coincide aproximadamente con la ley de Planck?</li>
+                                                <li>¿Por qué los objetos muy calientes (como el Sol o una estrella) emiten luz visible, mientras que los objetos a temperatura ambiente emiten principalmente en el infrarrojo?</li>
+                                            </ol>
+                                            
+                                            <div class="alert alert-info mt-3">
+                                                <h6><i class="bi bi-lightbulb-fill me-2"></i>Aplicación Práctica</h6>
+                                                <p class="mb-0">La ley de Planck tiene numerosas aplicaciones prácticas, desde la determinación de la temperatura de estrellas distantes hasta el diseño de termómetros infrarrojos y la calibración de instrumentos ópticos. En nanotecnología, es fundamental para entender la emisión térmica de nanoestructuras y el diseño de materiales con propiedades ópticas específicas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Problemas -->
+                                <div class="tab-pane fade" id="problemas" role="tabpanel" aria-labelledby="problemas-tab">
+                                    <h4>Problemas Propuestos</h4>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-success text-white">
+                                            <h5 class="card-title mb-0">Problema 1: Ley de Stefan-Boltzmann</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>La ley de Stefan-Boltzmann establece que la potencia total radiada por unidad de área de un cuerpo negro es proporcional a la cuarta potencia de su temperatura absoluta:</p>
+                                            <div class="math-formula">
+                                                <p>P/A = σT⁴</p>
+                                                <p>Donde σ = 5.67 × 10<sup>-8</sup> W/(m²·K⁴) es la constante de Stefan-Boltzmann.</p>
+                                            </div>
+                                            
+                                            <h6>Enunciado:</h6>
+                                            <p>Un cuerpo negro esférico de radio 10 cm se mantiene a una temperatura de 1000 K. Calcule:</p>
+                                            <ol type="a">
+                                                <li>La potencia total radiada por el cuerpo negro.</li>
+                                                <li>Si la temperatura se duplica a 2000 K, ¿cuántas veces aumenta la potencia radiada?</li>
+                                            </ol>
+                                            
+                                            <div class="accordion mt-3" id="accordionProblema1">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingProblema1Hint">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProblema1Hint" aria-expanded="false" aria-controls="collapseProblema1Hint">
+                                                            Pista
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseProblema1Hint" class="accordion-collapse collapse" aria-labelledby="headingProblema1Hint" data-bs-parent="#accordionProblema1">
+                                                        <div class="accordion-body">
+                                                            <p>Para la parte (a), recuerde que el área de una esfera es A = 4πr². Para la parte (b), compare las expresiones P₁ = σT₁⁴ y P₂ = σT₂⁴.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingProblema1Solution">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProblema1Solution" aria-expanded="false" aria-controls="collapseProblema1Solution">
+                                                            Solución
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseProblema1Solution" class="accordion-collapse collapse" aria-labelledby="headingProblema1Solution" data-bs-parent="#accordionProblema1">
+                                                        <div class="accordion-body">
+                                                            <p><strong>(a)</strong> El área de la esfera es:</p>
+                                                            <p>A = 4πr² = 4π(0.1 m)² = 0.1257 m²</p>
+                                                            <p>La potencia total radiada es:</p>
+                                                            <p>P = σAT⁴ = (5.67 × 10<sup>-8</sup> W/(m²·K⁴))(0.1257 m²)(1000 K)⁴ = 713.3 W</p>
+                                                            
+                                                            <p><strong>(b)</strong> La relación entre las potencias es:</p>
+                                                            <p>P₂/P₁ = (T₂/T₁)⁴ = (2000 K/1000 K)⁴ = 2⁴ = 16</p>
+                                                            <p>La potencia aumenta 16 veces cuando la temperatura se duplica.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-success text-white">
+                                            <h5 class="card-title mb-0">Problema 2: Ley de Desplazamiento de Wien</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>La ley de desplazamiento de Wien establece que la longitud de onda correspondiente al máximo de emisión de un cuerpo negro es inversamente proporcional a su temperatura absoluta:</p>
+                                            <div class="math-formula">
+                                                <p>λ<sub>max</sub> = b/T</p>
+                                                <p>Donde b = 2.898 × 10<sup>-3</sup> m·K es la constante de desplazamiento de Wien.</p>
+                                            </div>
+                                            
+                                            <h6>Enunciado:</h6>
+                                            <p>La temperatura superficial del Sol es aproximadamente 5800 K.</p>
+                                            <ol type="a">
+                                                <li>Calcule la longitud de onda correspondiente al máximo de emisión del Sol.</li>
+                                                <li>¿En qué región del espectro electromagnético se encuentra esta longitud de onda?</li>
+                                                <li>La temperatura superficial de la estrella Betelgeuse es aproximadamente 3500 K. ¿Cómo se compara su máximo de emisión con el del Sol?</li>
+                                            </ol>
+                                            
+                                            <div class="accordion mt-3" id="accordionProblema2">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingProblema2Hint">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProblema2Hint" aria-expanded="false" aria-controls="collapseProblema2Hint">
+                                                            Pista
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseProblema2Hint" class="accordion-collapse collapse" aria-labelledby="headingProblema2Hint" data-bs-parent="#accordionProblema2">
+                                                        <div class="accordion-body">
+                                                            <p>Para la parte (b), recuerde que el espectro visible abarca aproximadamente desde 400 nm (violeta) hasta 700 nm (rojo). Para la parte (c), compare directamente las longitudes de onda máximas.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingProblema2Solution">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProblema2Solution" aria-expanded="false" aria-controls="collapseProblema2Solution">
+                                                            Solución
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseProblema2Solution" class="accordion-collapse collapse" aria-labelledby="headingProblema2Solution" data-bs-parent="#accordionProblema2">
+                                                        <div class="accordion-body">
+                                                            <p><strong>(a)</strong> La longitud de onda correspondiente al máximo de emisión del Sol es:</p>
+                                                            <p>λ<sub>max</sub> = b/T = (2.898 × 10<sup>-3</sup> m·K)/(5800 K) = 5.00 × 10<sup>-7</sup> m = 500 nm</p>
+                                                            
+                                                            <p><strong>(b)</strong> Esta longitud de onda (500 nm) corresponde a la luz verde en la región visible del espectro electromagnético.</p>
+                                                            
+                                                            <p><strong>(c)</strong> Para Betelgeuse:</p>
+                                                            <p>λ<sub>max</sub> = b/T = (2.898 × 10<sup>-3</sup> m·K)/(3500 K) = 8.28 × 10<sup>-7</sup> m = 828 nm</p>
+                                                            <p>Esta longitud de onda está en la región del infrarrojo cercano, justo fuera del rango visible. Esto explica por qué Betelgeuse aparece rojiza, ya que su emisión máxima está desplazada hacia longitudes de onda más largas en comparación con el Sol.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                        <div class="card-header bg-success text-white">
+                                            <h5 class="card-title mb-0">Problema 3: Cuantización de la Energía</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Enunciado:</h6>
+                                            <p>Considere un oscilador electromagnético con frecuencia ν = 5.0 × 10<sup>14</sup> Hz.</p>
+                                            <ol type="a">
+                                                <li>Calcule la energía de un cuanto (quantum) para este oscilador.</li>
+                                                <li>¿Cuántos cuantos de energía corresponden a una energía total de 1.0 × 10<sup>-18</sup> J?</li>
+                                                <li>A temperatura ambiente (T = 300 K), la energía térmica promedio es aproximadamente kT, donde k es la constante de Boltzmann. Compare la energía de un cuanto con kT y explique por qué los efectos cuánticos no son evidentes en nuestra experiencia cotidiana.</li>
+                                            </ol>
+                                            
+                                            <div class="accordion mt-3" id="accordionProblema3">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingProblema3Hint">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProblema3Hint" aria-expanded="false" aria-controls="collapseProblema3Hint">
+                                                            Pista
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseProblema3Hint" class="accordion-collapse collapse" aria-labelledby="headingProblema3Hint" data-bs-parent="#accordionProblema3">
+                                                        <div class="accordion-body">
+                                                            <p>Para la parte (a), use E = hν. Para la parte (c), la constante de Boltzmann es k = 1.38 × 10<sup>-23</sup> J/K.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingProblema3Solution">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProblema3Solution" aria-expanded="false" aria-controls="collapseProblema3Solution">
+                                                            Solución
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseProblema3Solution" class="accordion-collapse collapse" aria-labelledby="headingProblema3Solution" data-bs-parent="#accordionProblema3">
+                                                        <div class="accordion-body">
+                                                            <p><strong>(a)</strong> La energía de un cuanto es:</p>
+                                                            <p>E = hν = (6.626 × 10<sup>-34</sup> J·s)(5.0 × 10<sup>14</sup> Hz) = 3.31 × 10<sup>-19</sup> J</p>
+                                                            
+                                                            <p><strong>(b)</strong> El número de cuantos correspondiente a una energía total de 1.0 × 10<sup>-18</sup> J es:</p>
+                                                            <p>n = E<sub>total</sub>/E<sub>cuanto</sub> = (1.0 × 10<sup>-18</sup> J)/(3.31 × 10<sup>-19</sup> J) ≈ 3.02</p>
+                                                            <p>Como n debe ser un entero según la hipótesis de Planck, esto correspondería a 3 cuantos completos.</p>
+                                                            
+                                                            <p><strong>(c)</strong> La energía térmica promedio a temperatura ambiente es:</p>
+                                                            <p>kT = (1.38 × 10<sup>-23</sup> J/K)(300 K) = 4.14 × 10<sup>-21</sup> J</p>
+                                                            <p>La relación entre la energía del cuanto y la energía térmica es:</p>
+                                                            <p>E/kT = (3.31 × 10<sup>-19</sup> J)/(4.14 × 10<sup>-21</sup> J) ≈ 80</p>
+                                                            <p>Esto significa que la energía de un cuanto para esta frecuencia (luz visible) es aproximadamente 80 veces mayor que la energía térmica promedio a temperatura ambiente. Los efectos cuánticos no son evidentes en nuestra experiencia cotidiana porque tratamos principalmente con sistemas macroscópicos que involucran enormes números de partículas y energías mucho mayores que hν, lo que hace que los efectos de cuantización sean imperceptibles. Sin embargo, a nivel microscópico o a frecuencias muy altas, los efectos cuánticos se vuelven dominantes.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navegación entre sesiones -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>Volver a la Unidad
+                            </a>
+                            <a href="sesion4.html" class="btn btn-primary">
+                                Siguiente Sesión<i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-md-4">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-heading">Navegación de Unidad</h3>
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav-item">
+                                <a href="index.html" class="sidebar-nav-link">
+                                    <i class="bi bi-house-door me-2"></i>Inicio de Unidad 1
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion3.html" class="sidebar-nav-link active">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 3: Crisis Clásica y Cuantización
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion4.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 4: Efecto Fotoeléctrico
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion5.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 5: Espectros y Modelo de Bohr
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion6.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 6: Repaso y Evaluación
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="sidebar-heading mt-4">Información de la Sesión</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <p><strong><i class="bi bi-calendar-event me-2"></i>Fecha:</strong> Mayo 2025</p>
+                                <p><strong><i class="bi bi-clock me-2"></i>Duración:</strong> 2 horas</p>
+                                <p><strong><i class="bi bi-geo-alt me-2"></i>Modalidad:</strong> Presencial asistida por tecnología</p>
+                                <p><strong><i class="bi bi-person me-2"></i>Profesor:</strong> Por asignar</p>
+                                <hr>
+                                <p><strong><i class="bi bi-book me-2"></i>Lecturas Recomendadas:</strong></p>
+                                <ul class="mb-0">
+                                    <li>Serway, R. A. Física Moderna, Cap. 3.1-3.2</li>
+                                    <li>Eisberg, R. Física Cuántica, Cap. 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3 class="sidebar-heading mt-4">Conceptos Clave</h3>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Cuerpo Negro</h5>
+                                <p class="mb-0">Objeto idealizado que absorbe toda la radiación incidente y emite un espectro característico que depende solo de su temperatura.</p>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Catástrofe Ultravioleta</h5>
+                                <p class="mb-0">Predicción errónea de la física clásica sobre la radiación de cuerpo negro a altas frecuencias.</p>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Cuantización</h5>
+                                <p class="mb-0">Propiedad de ciertas magnitudes físicas de tomar solo valores discretos, no continuos.</p>
+                            </div>
+                            <div class="list-group-item">
+                                <h5 class="mb-1">Constante de Planck</h5>
+                                <p class="mb-0">Constante física fundamental (h = 6.626 × 10<sup>-34</sup> J·s) que establece la escala de los fenómenos cuánticos.</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Física Moderna</h4>
+                    <p>Curso para Ingeniería en Nanotecnología</p>
+                    <p>Periodo: Mayo - Agosto 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="../../recursos/bibliografia.html" class="footer-link">Bibliografía</a></li>
+                        <li><a href="../../recursos/simulaciones.html" class="footer-link">Simulaciones</a></li>
+                        <li><a href="../../recursos/evaluacion.html" class="footer-link">Sistema de Evaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Recursos Externos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="footer-link" target="_blank">PhET Interactive Simulations</a></li>
+                        <li><a href="https://classroom.google.com" class="footer-link" target="_blank">Google Classroom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Física Moderna - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>

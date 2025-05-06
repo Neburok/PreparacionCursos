@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 5: Introducción al Estado Sólido - Física Moderna</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="site-title">Física Moderna</h1>
+                    <p class="lead text-white mb-0">Ingeniería en Nanotecnología - Mayo-Agosto 2025</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-white mb-0"><i class="bi bi-calendar-event"></i> 26 sesiones | <i class="bi bi-clock"></i> 60 horas totales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownUnidades" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Unidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUnidades">
+                            <li><a class="dropdown-item" href="../unidad0/index.html">Unidad 0: Introducción y Diagnóstico</a></li>
+                            <li><a class="dropdown-item" href="../unidad1/index.html">Unidad 1: Fundamentos de Teoría Cuántica</a></li>
+                            <li><a class="dropdown-item" href="../unidad2/index.html">Unidad 2: Dualidad onda-partícula</a></li>
+                            <li><a class="dropdown-item" href="../unidad3/index.html">Unidad 3: Ecuación de Schrödinger</a></li>
+                            <li><a class="dropdown-item" href="../unidad4/index.html">Unidad 4: Átomos y Estructura</a></li>
+                            <li><a class="dropdown-item active" href="../unidad5/index.html">Unidad 5: Introducción al Estado Sólido</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/bibliografia.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../recursos/evaluacion.html">Evaluación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Contenido de la Unidad -->
+                <div class="col-md-8 mb-4">
+                    <section class="content-box fade-in">
+                        <h2 class="page-title">Unidad 5: Introducción al Estado Sólido</h2>
+                        
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle-fill me-2"></i> Esta unidad final explora los fundamentos de la física del estado sólido, incluyendo redes cristalinas, teoría de bandas y clasificación de materiales.
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Descripción de la Unidad</h3>
+                            <p>La Unidad 5 introduce los conceptos fundamentales de la física del estado sólido, aplicando los principios cuánticos a sistemas de muchos átomos. Estudiaremos las redes cristalinas y el concepto de potenciales periódicos, introduciendo el Teorema de Bloch. Analizaremos el modelo de Kronig-Penney para comprender el origen de las bandas de energía en sólidos. Exploraremos la teoría de bandas, incluyendo las bandas de valencia, conducción y la banda prohibida (gap). Finalmente, utilizaremos estos conceptos para clasificar los materiales como conductores, aislantes y semiconductores, estableciendo conexiones con las propiedades de los materiales nanoestructurados.</p>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Resultados de Aprendizaje</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-check-circle-fill text-success me-2"></i>RA5.1</h5>
+                                    <p class="card-text">Explicar el origen de las bandas de energía en sólidos a partir de potenciales periódicos (conceptualmente).</p>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-check-circle-fill text-success me-2"></i>RA5.2</h5>
+                                    <p class="card-text">Utilizar la teoría de bandas para clasificar materiales como conductores, aislantes y semiconductores, con aplicación a materiales nanoestructurados.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Sesiones</h3>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 22: Redes Cristalinas</h4>
+                                        <span class="badge bg-primary">Semana 11</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Potenciales Periódicos y Teorema de Bloch</h6>
+                                    <p class="card-text">Introducción a las redes cristalinas, el concepto de potenciales periódicos y una presentación conceptual del Teorema de Bloch.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Julio 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion22.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 23: Modelo de Kronig-Penney</h4>
+                                        <span class="badge bg-primary">Semana 12</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Origen de las Bandas</h6>
+                                    <p class="card-text">Estudio del modelo de Kronig-Penney y discusión cualitativa de cómo este modelo explica la formación de bandas de energía en sólidos.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Agosto 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion23.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 24: Teoría de Bandas</h4>
+                                        <span class="badge bg-primary">Semana 12</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Bandas de Valencia, Conducción y Gap</h6>
+                                    <p class="card-text">Análisis de la teoría de bandas, incluyendo las bandas de valencia, conducción y la banda prohibida (gap), con diagramas de bandas para diferentes materiales.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Agosto 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion24.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 25: Clasificación de Materiales</h4>
+                                        <span class="badge bg-primary">Semana 13</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Conductores, Aislantes y Semiconductores</h6>
+                                    <p class="card-text">Clasificación de materiales como conductores, aislantes y semiconductores basada en su estructura de bandas, con énfasis en las propiedades eléctricas.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Agosto 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion25.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title">Sesión 26: Evaluación Final y Cierre</h4>
+                                        <span class="badge bg-primary">Semana 13</span>
+                                    </div>
+                                    <h6 class="card-subtitle mb-2 text-muted">Repaso General y Evaluación Integradora</h6>
+                                    <p class="card-text">Repaso general del curso, sesión de preguntas y respuestas, aplicación de la evaluación final integradora y cierre del curso.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark me-1"><i class="bi bi-calendar-event"></i> Fecha: Agosto 2025</span>
+                                            <span class="badge bg-light text-dark"><i class="bi bi-clock"></i> Duración: 2 horas</span>
+                                        </div>
+                                        <a href="sesion26.html" class="btn btn-sm btn-outline-primary">Ver sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Conceptos Clave</h3>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Redes Cristalinas</h5>
+                                            <p class="card-text">Arreglos periódicos de átomos o moléculas en un sólido, que determinan muchas de sus propiedades físicas. La periodicidad de la red crea potenciales periódicos para los electrones.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Teorema de Bloch</h5>
+                                            <p class="card-text">Establece que las funciones de onda de los electrones en un potencial periódico pueden expresarse como el producto de una onda plana por una función con la misma periodicidad que la red cristalina.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Bandas de Energía</h5>
+                                            <p class="card-text">Rangos de energía permitidos para los electrones en un sólido, separados por bandas prohibidas (gaps) donde no existen estados energéticos permitidos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-lightbulb text-warning me-2"></i>Clasificación de Materiales</h5>
+                                            <p class="card-text">
+                                                <strong>Conductores:</strong> Bandas parcialmente llenas o bandas de valencia y conducción solapadas.<br>
+                                                <strong>Aislantes:</strong> Banda de valencia llena, banda de conducción vacía, gap grande.<br>
+                                                <strong>Semiconductores:</strong> Estructura similar a aislantes pero con gap pequeño.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Simulaciones Recomendadas</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-laptop text-primary me-2"></i>Conductividad</h5>
+                                    <p class="card-text">Simulación PhET "Conductivity" para explorar cómo la estructura de bandas afecta las propiedades eléctricas de diferentes materiales.</p>
+                                    <a href="https://phet.colorado.edu/es/simulations/conductivity" class="btn btn-sm btn-outline-primary" target="_blank">Acceder a la simulación</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Aplicaciones a Materiales Nanoestructurados</h3>
+                            <p>Los conceptos de la física del estado sólido son fundamentales para comprender las propiedades únicas de los materiales nanoestructurados. A escala nanométrica, los efectos cuánticos se vuelven dominantes y pueden modificar significativamente la estructura de bandas, lo que permite diseñar materiales con propiedades específicas para aplicaciones en electrónica, fotónica, energía y medicina.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Puntos Cuánticos</h5>
+                                            <p class="card-text">Nanocristales semiconductores cuyo tamaño determina sus propiedades ópticas y electrónicas debido al confinamiento cuántico.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nanotubos de Carbono</h5>
+                                            <p class="card-text">Estructuras cilíndricas de carbono que pueden comportarse como metales o semiconductores dependiendo de su quiralidad.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-md-4">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-heading">Navegación de Unidad</h3>
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav-item">
+                                <a href="index.html" class="sidebar-nav-link active">
+                                    <i class="bi bi-house-door me-2"></i>Inicio de Unidad 5
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion22.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 22: Redes Cristalinas
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion23.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 23: Modelo de Kronig-Penney
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion24.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 24: Teoría de Bandas
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion25.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 25: Clasificación de Materiales
+                                </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a href="sesion26.html" class="sidebar-nav-link">
+                                    <i class="bi bi-file-text me-2"></i>Sesión 26: Evaluación Final y Cierre
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="sidebar-heading mt-4">Recursos de la Unidad</h3>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Redes Cristalinas</h5>
+                                <p class="resource-description">Estructuras y propiedades</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Teoría de Bandas</h5>
+                                <p class="resource-description">Conceptos fundamentales</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Semiconductores</h5>
+                                <p class="resource-description">Propiedades y aplicaciones</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <i class="bi bi-file-earmark-pdf resource-icon"></i>
+                            <div>
+                                <h5 class="resource-title">Apuntes: Nanomateriales</h5>
+                                <p class="resource-description">Aplicaciones en nanotecnología</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 d-flex justify-content-between">
+                            <a href="../unidad4/index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left"></i> Unidad Anterior
+                            </a>
+                            <a href="../../index.html" class="btn btn-primary">
+                                Volver al Inicio <i class="bi bi-house-door"></i>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Física Moderna</h4>
+                    <p>Curso para Ingeniería en Nanotecnología</p>
+                    <p>Periodo: Mayo - Agosto 2025</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="../../recursos/bibliografia.html" class="footer-link">Bibliografía</a></li>
+                        <li><a href="../../recursos/simulaciones.html" class="footer-link">Simulaciones</a></li>
+                        <li><a href="../../recursos/evaluacion.html" class="footer-link">Sistema de Evaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-heading">Recursos Externos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://phet.colorado.edu/es/simulations/filter?subjects=quantum-phenomena&type=html&sort=alpha&view=grid" class="footer-link" target="_blank">PhET Interactive Simulations</a></li>
+                        <li><a href="https://classroom.google.com" class="footer-link" target="_blank">Google Classroom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Física Moderna - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>
